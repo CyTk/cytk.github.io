@@ -274,6 +274,7 @@ navigation li a.active {
 .be-the-change .images {
     height: 500px;
     position: relative;
+    min-width: 740px;
 }
 
 /* Tech's best friend */
