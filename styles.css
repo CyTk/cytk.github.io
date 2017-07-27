@@ -282,6 +282,10 @@ navigation li a.active {
     text-align: center;
 }
 
+.best-friend .mdl-cell {
+    min-width: 350px;
+}
+
 .best-friend .h3 {
     font-family: alright_sansbold;
     font-weight: normal;
@@ -310,7 +314,7 @@ navigation li a.active {
 .value-to-oems .value-card {
     padding: 0px;
     margin: 50px 0 0 0;
-
+    min-width: 350px;
 }
 
 .value-to-oems .value-card .mdl-card {
@@ -320,7 +324,6 @@ navigation li a.active {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    width: 70%;
     height: 365px;
 }
 
