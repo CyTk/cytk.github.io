@@ -497,11 +497,13 @@ navigation li a.active {
 
 #platform .mdl-cell {
     min-width: 350px;
+    margin-bottom: 65px;
 }
 
 #advisors .mdl-cell {
     padding: 10px 60px;
     min-width: 350px;
+    margin-bottom: 45px;
 }
 
 /* Lets Talk section */
