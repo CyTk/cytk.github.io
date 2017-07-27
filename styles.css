@@ -101,7 +101,13 @@ ul.navigation li a {
 }
 
 .big-action {
+    margin-top: 50px;
+    min-width: 470px;
+    margin-left: 0px;
+}
 
+.big-action .mdl-cell {
+    min-width: 400px;
 }
 
 .sticky-nav {
@@ -149,8 +155,10 @@ ul.navigation li a {
     padding-left: 60px;
     padding-right: 60px;
     z-index: 3;
+    /*height: auto;*/
+    height: 660px;
+    margin-bottom: 100px;
     /*min-height: 590px;*/
-    height: auto;
     /* Firefox */
     /*height: -moz-calc(100% - 18px);*/
     /* WebKit */
@@ -515,6 +523,11 @@ navigation li a.active {
 }
 
 @media only screen and (max-width: 850px) {
+    .header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .big-action h1 {
         font-size: 36px;
     }
@@ -525,6 +538,9 @@ navigation li a.active {
 
     [class*="mdl-cell--6"] {
         width: 100%;
+    }
+    .big-action .mdl-cell {
+        margin: 10px auto 0px auto !important;
     }
 
     .cytk-logomark-motion {
@@ -546,7 +562,6 @@ navigation li a.active {
         background: url("images/CYTK-Mockup-small.png") no-repeat center center;
         width: 450px;
         height: 321px;
-        /*float: right*/
     }
 }
 
