@@ -284,6 +284,8 @@ navigation li a.active {
 
 .best-friend .mdl-cell {
     min-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .best-friend .h3 {
@@ -315,6 +317,8 @@ navigation li a.active {
     padding: 0px;
     margin: 50px 0 0 0;
     min-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .value-to-oems .value-card .mdl-card {
@@ -501,12 +505,16 @@ navigation li a.active {
 #platform .mdl-cell {
     min-width: 350px;
     margin-bottom: 65px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #advisors .mdl-cell {
     padding: 10px 60px;
     min-width: 350px;
     margin-bottom: 45px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* Lets Talk section */
