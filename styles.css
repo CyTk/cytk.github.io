@@ -386,6 +386,26 @@ navigation li a.active {
     position: relative;
 }
 
+.value-to-oems .a-vast-market-images .mechanic-1 {
+    background: url("images/Mechanic-01.png") no-repeat;
+    width: 468px;
+    height: 569px;
+    position: absolute;
+    left: 0;
+    top: -200px;
+    z-index: 0;
+}
+
+.value-to-oems .a-vast-market-images .mechanic-2 {
+    background: url("images/Mechanic-02.png") no-repeat;
+    width: 463px;
+    height: 562px;
+    position: absolute;
+    left: 320px;
+    top: -32px;
+    z-index: 0;
+}
+
 /* Voice interfaces */
 
 .voice-interfaces {
@@ -398,7 +418,7 @@ navigation li a.active {
     font-size: 20px;
     color: #136CFB;
     float: left;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     line-height: 37px;
 }
 
@@ -410,7 +430,7 @@ navigation li a.active {
     opacity: 0.4;
     filter: alpha(opacity=40) progid:DXImageTransform.Microsoft.Alpha(opacity=40);
     float: left;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     line-height: 37px;
 }
 
@@ -597,7 +617,7 @@ navigation li a.active {
     .be-the-change .images {
         height: 200px;
     }
-    
+
     .be-the-change .images .production-line-1 {
         background: url("images/ProductionLine-01-medium.png") no-repeat;
         width: 290px;
@@ -611,6 +631,22 @@ navigation li a.active {
         height: 357px;
         left: 100px;
         top: -185px;
+    }
+
+    .value-to-oems .a-vast-market-images .mechanic-1 {
+        background: url("images/Mechanic-01-medium.png") no-repeat;
+        width: 290px;
+        height: 353px;
+        left: 0;
+        top: -200px;
+    }
+
+    .value-to-oems .a-vast-market-images .mechanic-2 {
+        background: url("images/Mechanic-02-medium.png") no-repeat;
+        width: 290px;
+        height: 352px;
+        left: 320px;
+        top: -32px;
     }
 }
 
@@ -639,6 +675,27 @@ navigation li a.active {
         height: 179px;
         left: 100px;
         top: -185px;
+    }
+
+    .value-to-oems .a-vast-market-images {
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+
+    .value-to-oems .a-vast-market-images .mechanic-1 {
+        background: url("images/Mechanic-01-small.png") no-repeat;
+        width: 145px;
+        height: 176px;
+        left: 0;
+        top: -200px;
+    }
+
+    .value-to-oems .a-vast-market-images .mechanic-2 {
+        background: url("images/Mechanic-02-small.png") no-repeat;
+        width: 145px;
+        height: 176px;
+        left: 99px;
+        top: -148px;
     }
 }
 
