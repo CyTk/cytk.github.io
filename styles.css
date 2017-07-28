@@ -529,13 +529,13 @@ navigation li a.active {
     }
 
     .big-action h1 {
-        font-size: 36px;
-        min-width: 350px;
+        font-size: 36px !important;
+        min-width: 350px !important;
     }
 
     .big-action h3 {
-        font-size: 22px;
-        min-width: 350px;
+        font-size: 22px !important;
+        min-width: 350px !important;
     }
 
     [class*="mdl-cell--6"] {
@@ -543,7 +543,7 @@ navigation li a.active {
     }
 
     .big-action {
-        min-width: 400px;
+        min-width: 400px !important;
     }
 
     .big-action .mdl-cell {
