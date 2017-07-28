@@ -311,7 +311,7 @@ navigation li a.active {
     min-width: 350px;
     margin-right: auto;
     margin-left: auto;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .value-to-oems .value-card .mdl-card {
@@ -322,7 +322,7 @@ navigation li a.active {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     height: 365px;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .value-to-oems .value-card .mdl-card__title {
