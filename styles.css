@@ -530,6 +530,7 @@ navigation li a.active {
 
     .big-action h1 {
         font-size: 36px;
+        min-width: 350px;
     }
 
     .big-action h3 {
@@ -540,8 +541,14 @@ navigation li a.active {
     [class*="mdl-cell--6"] {
         width: 100%;
     }
+
+    .big-action {
+        min-width: 400px;
+    }
+
     .big-action .mdl-cell {
         margin: 10px auto 0px auto !important;
+        min-width: 350px;
     }
 
     .cytk-logomark-motion {
