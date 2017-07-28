@@ -83,11 +83,11 @@ ul.navigation li a {
 }
 
 .offset {
-    background-image: linear-gradient(top, white 650px, #EFEFEF 650px,  #EFEFEF 100%);
-    background-image: -webkit-linear-gradient(top, white 650px, #EFEFEF 650px,  #EFEFEF 100%);
-    background-image: -moz-linear-gradient(top, white 650px, #EFEFEF 650px,  #EFEFEF 100%);
-    background-image: -ms-linear-gradient(top, white 650px, #EFEFEF 650px,  #EFEFEF 100%);
-    background-image: -o-linear-gradient(top, white 650px, #EFEFEF 650px,  #EFEFEF 100%);
+    background-image: linear-gradient(top, white 650px, #EFEFEF 650px, #EFEFEF 100%);
+    background-image: -webkit-linear-gradient(top, white 650px, #EFEFEF 650px, #EFEFEF 100%);
+    background-image: -moz-linear-gradient(top, white 650px, #EFEFEF 650px, #EFEFEF 100%);
+    background-image: -ms-linear-gradient(top, white 650px, #EFEFEF 650px, #EFEFEF 100%);
+    background-image: -o-linear-gradient(top, white 650px, #EFEFEF 650px, #EFEFEF 100%);
     width: 100%;
 }
 
@@ -115,7 +115,7 @@ ul.navigation li a {
     height: auto;
     background-color: #FCFCFC;
     margin: 0px;
-    padding: 10px 50px;
+    padding: 10px 20px;
     z-index: 2;
 }
 
@@ -247,6 +247,26 @@ navigation li a.active {
     height: 500px;
     position: relative;
     min-width: 740px;
+}
+
+.be-the-change .images .production-line-1 {
+    background: url("images/ProductionLine-01.png") no-repeat;
+    width: 468px;
+    height: 569px;
+    position: absolute;
+    left: 0px;
+    top: -275px;
+    z-index: 0;
+}
+
+.be-the-change .images .production-line-2 {
+    background: url("images/ProductionLine-02.png") no-repeat;
+    width: 456px;
+    height: 562px;
+    position: absolute;
+    left: 325px;
+    top: -100px;
+    z-index: 0;
 }
 
 /* Tech's best friend */
@@ -573,11 +593,52 @@ navigation li a.active {
     }
 }
 
+@media only screen and (max-width: 775px) {
+    .be-the-change .images {
+        height: 200px;
+    }
+    
+    .be-the-change .images .production-line-1 {
+        background: url("images/ProductionLine-01-medium.png") no-repeat;
+        width: 290px;
+        height: 353px;
+        top: -240px;
+    }
+
+    .be-the-change .images .production-line-2 {
+        background: url("images/ProductionLine-02-medium.png") no-repeat;
+        width: 290px;
+        height: 357px;
+        left: 100px;
+        top: -185px;
+    }
+}
+
 @media only screen and (max-width: 450px) {
     .tablet {
-        background: url("images/CYTK-Mockup-smaller.png") no-repeat center center;
-        width: 350px;
-        height: 250px;
+        background: url("images/CYTK-Mockup-smaller.png") no-repeat center center !important;
+        width: 350px !important;;
+        height: 250px !important;;
+    }
+
+    .be-the-change .images {
+        height: 0px;
+        min-width: 280px;
+    }
+
+    .be-the-change .images .production-line-1 {
+        background: url("images/ProductionLine-01-small.png") no-repeat;
+        width: 145px;
+        height: 176px;
+        top: -240px;
+    }
+
+    .be-the-change .images .production-line-2 {
+        background: url("images/ProductionLine-02-small.png") no-repeat;
+        width: 145px;
+        height: 179px;
+        left: 100px;
+        top: -185px;
     }
 }
 
