@@ -534,6 +534,7 @@ navigation li a.active {
 
     .big-action h3 {
         font-size: 22px;
+        min-width: 350px;
     }
 
     [class*="mdl-cell--6"] {
