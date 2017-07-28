@@ -88,7 +88,6 @@ ul.navigation li a {
     background-image: -moz-linear-gradient(top, white 650px, #EFEFEF 650px, #EFEFEF 100%);
     background-image: -ms-linear-gradient(top, white 650px, #EFEFEF 650px, #EFEFEF 100%);
     background-image: -o-linear-gradient(top, white 650px, #EFEFEF 650px, #EFEFEF 100%);
-    width: 100%;
 }
 
 .fixed {
@@ -312,6 +311,7 @@ navigation li a.active {
     min-width: 350px;
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
 }
 
 .value-to-oems .value-card .mdl-card {
@@ -322,6 +322,7 @@ navigation li a.active {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     height: 365px;
+    width: 100%;
 }
 
 .value-to-oems .value-card .mdl-card__title {
@@ -677,6 +678,10 @@ navigation li a.active {
         top: -185px;
     }
 
+    .value-to-oems .value-card {
+        min-width: 280px;
+    }
+
     .value-to-oems .a-vast-market-images {
         margin-top: 200px;
         margin-bottom: 200px;
@@ -696,6 +701,14 @@ navigation li a.active {
         height: 176px;
         left: 99px;
         top: -148px;
+    }
+
+    .offset {
+        background-image: linear-gradient(top, white 750px, #EFEFEF 750px, #EFEFEF 100%);
+        background-image: -webkit-linear-gradient(top, white 750px, #EFEFEF 750px, #EFEFEF 100%);
+        background-image: -moz-linear-gradient(top, white 750px, #EFEFEF 750px, #EFEFEF 100%);
+        background-image: -ms-linear-gradient(top, white 750px, #EFEFEF 750px, #EFEFEF 100%);
+        background-image: -o-linear-gradient(top, white 750px, #EFEFEF 750px, #EFEFEF 100%);
     }
 }
 
