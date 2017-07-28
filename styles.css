@@ -530,12 +530,12 @@ navigation li a.active {
 
     .big-action h1 {
         font-size: 36px !important;
-        min-width: 350px !important;
+        min-width: 300px !important;
     }
 
     .big-action h3 {
         font-size: 22px !important;
-        min-width: 350px !important;
+        min-width: 300px !important;
     }
 
     [class*="mdl-cell--6"] {
@@ -543,12 +543,12 @@ navigation li a.active {
     }
 
     .big-action {
-        min-width: 400px !important;
+        min-width: 350px !important;
     }
 
     .big-action .mdl-cell {
         margin: 10px auto 0px auto !important;
-        min-width: 350px;
+        min-width: 350px !important;
     }
 
     .cytk-logomark-motion {
@@ -570,6 +570,14 @@ navigation li a.active {
         background: url("images/CYTK-Mockup-small.png") no-repeat center center;
         width: 450px;
         height: 321px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .tablet {
+        background: url("images/CYTK-Mockup-smaller.png") no-repeat center center;
+        width: 350px;
+        height: 250px;
     }
 }
 
