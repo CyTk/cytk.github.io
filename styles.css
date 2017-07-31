@@ -526,15 +526,14 @@ navigation li a.active {
 }
 
 #platform .mdl-cell {
-    min-width: 350px;
+    min-width: 280px;
     margin-bottom: 65px;
     margin-right: auto;
     margin-left: auto;
 }
 
 #advisors .mdl-cell {
-    padding: 10px 60px;
-    min-width: 350px;
+    min-width: 280px;
     margin-bottom: 45px;
     margin-right: auto;
     margin-left: auto;
@@ -752,6 +751,20 @@ navigation li a.active {
         background-image: -moz-linear-gradient(top, white 750px, #EFEFEF 750px, #EFEFEF 100%);
         background-image: -ms-linear-gradient(top, white 750px, #EFEFEF 750px, #EFEFEF 100%);
         background-image: -o-linear-gradient(top, white 750px, #EFEFEF 750px, #EFEFEF 100%);
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .big-action {
+        min-width: 305px !important;
+    }
+
+    .value-to-oems .a-vast-market-images, .big-action .mdl-cell {
+        min-width: 305px !important;
+    }
+
+    .mdl-card {
+        width: auto;
     }
 }
 
