@@ -105,6 +105,7 @@ ul.navigation li a {
 }
 
 .big-action {
+    width: 100%;
     margin-top: 50px;
     min-width: 470px;
     margin-left: 0px;
@@ -112,6 +113,10 @@ ul.navigation li a {
 
 .big-action .mdl-cell {
     min-width: 400px;
+}
+
+.big-action .mdl-cell--5-col{
+    margin-left: 0px;
 }
 
 .sticky-nav {
@@ -608,12 +613,12 @@ navigation li a.active {
     }
 
     .big-action {
-        min-width: 350px !important;
+        min-width: 350px;
     }
 
     .big-action .mdl-cell {
-        margin: 10px auto 0px auto !important;
-        min-width: 350px !important;
+        margin: 10px auto 0 0 !important;
+        min-width: 350px;
     }
 
     .cytk-logomark-motion {
@@ -635,6 +640,9 @@ navigation li a.active {
         background: url("images/CYTK-Mockup-small.png") no-repeat center center;
         width: 450px;
         height: 321px;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -756,11 +764,11 @@ navigation li a.active {
 
 @media only screen and (max-width: 320px) {
     .big-action {
-        min-width: 305px !important;
+        min-width: 280px !important;
     }
 
     .value-to-oems .a-vast-market-images, .big-action .mdl-cell {
-        min-width: 305px !important;
+        min-width: 280px !important;
     }
 
     .mdl-card {
