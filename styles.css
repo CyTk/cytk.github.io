@@ -99,6 +99,11 @@ ul.navigation li a {
     left: 0px;
 }
 
+.mdl-cell {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .big-action {
     margin-top: 50px;
     min-width: 470px;
@@ -115,7 +120,7 @@ ul.navigation li a {
     background-color: #FCFCFC;
     margin: 0px;
     padding: 10px 20px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .sticky-nav ul {
@@ -311,7 +316,6 @@ navigation li a.active {
     min-width: 350px;
     margin-right: auto;
     margin-left: auto;
-    /*width: 100%;*/
 }
 
 .value-to-oems .value-card .mdl-card {
@@ -322,7 +326,6 @@ navigation li a.active {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     height: 365px;
-    /*width: 100%;*/
 }
 
 .value-to-oems .value-card .mdl-card__title {
@@ -374,7 +377,7 @@ navigation li a.active {
 .value-to-oems .a-vast-market {
     text-align: left;
     padding-left: 50px;
-    margin-top: 400px;
+    margin-top: 200px;
 }
 
 .value-to-oems .a-vast-market h3 {
@@ -382,8 +385,9 @@ navigation li a.active {
 }
 
 .value-to-oems .a-vast-market-images {
-    margin-top: 400px;
+    margin-top: 300px;
     margin-bottom: 500px;
+    min-width: 750px;
     position: relative;
 }
 
@@ -433,6 +437,10 @@ navigation li a.active {
     float: left;
     margin-bottom: 0;
     line-height: 37px;
+}
+
+.bar-chart {
+    margin: 8px;
 }
 
 .voice-interfaces .bar-chart .title {
@@ -554,6 +562,23 @@ navigation li a.active {
     text-align: left;
 }
 
+.interested-text a {
+    text-decoration: none;
+}
+
+.interested-text p {
+    font-family: alright_sansregular;
+    font-size: 28px;
+    line-height: 26px;
+    letter-spacing: -0.28px;
+    color: #136CFB;
+    text-decoration: none;
+}
+
+.interested-text .social-networks img {
+    margin-right: 20px;
+}
+
 @media only screen and (max-width: 1300px) {
     .tablet {
         background: url("images/CYTK-Mockup-medium.png") no-repeat center center;
@@ -617,12 +642,14 @@ navigation li a.active {
 @media only screen and (max-width: 775px) {
     .be-the-change .images {
         height: 200px;
+        min-width: 435px;
     }
 
     .be-the-change .images .production-line-1 {
         background: url("images/ProductionLine-01-medium.png") no-repeat;
         width: 290px;
         height: 353px;
+        left: calc(50% - 220px);
         top: -240px;
     }
 
@@ -630,15 +657,25 @@ navigation li a.active {
         background: url("images/ProductionLine-02-medium.png") no-repeat;
         width: 290px;
         height: 357px;
-        left: 100px;
-        top: -185px;
+        /*left: 100px;*/
+        left: calc(50% - 10px);
+        top: -140px;
+    }
+
+    .value-to-oems .a-vast-market {
+        margin-top: 150px;
+    }
+
+    .value-to-oems .a-vast-market-images {
+        margin-top: 250px;
+        min-width: 435px;
     }
 
     .value-to-oems .a-vast-market-images .mechanic-1 {
         background: url("images/Mechanic-01-medium.png") no-repeat;
         width: 290px;
         height: 353px;
-        left: 0;
+        left: calc(50% - 220px);;
         top: -200px;
     }
 
@@ -646,12 +683,12 @@ navigation li a.active {
         background: url("images/Mechanic-02-medium.png") no-repeat;
         width: 290px;
         height: 352px;
-        left: 320px;
+        left: calc(50% - 20px);
         top: -32px;
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
     .tablet {
         background: url("images/CYTK-Mockup-smaller.png") no-repeat center center !important;
         width: 350px !important;;
@@ -668,14 +705,20 @@ navigation li a.active {
         width: 145px;
         height: 176px;
         top: -240px;
+        left: calc(50% - 120px)
     }
 
     .be-the-change .images .production-line-2 {
         background: url("images/ProductionLine-02-small.png") no-repeat;
         width: 145px;
         height: 179px;
-        left: 100px;
+        /*left: 100px;*/
+        left: calc(50% - 20px);
         top: -185px;
+    }
+
+    .value-to-oems .a-vast-market {
+        margin-top: 150px;
     }
 
     .value-to-oems .value-card {
@@ -691,7 +734,7 @@ navigation li a.active {
         background: url("images/Mechanic-01-small.png") no-repeat;
         width: 145px;
         height: 176px;
-        left: 0;
+        left: calc(50% - 120px);
         top: -200px;
     }
 
@@ -699,7 +742,7 @@ navigation li a.active {
         background: url("images/Mechanic-02-small.png") no-repeat;
         width: 145px;
         height: 176px;
-        left: 99px;
+        left: calc(50% - 20px);
         top: -148px;
     }
 
