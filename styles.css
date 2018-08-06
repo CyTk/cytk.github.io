@@ -51,18 +51,22 @@ h4 {
     color: #3A3A3A;
 }
 
-ul.navigation {
+.navigation ul li.active a {
+    background-color: yellow;
+}
+
+.navigation ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     float: right;
 }
 
-ul.navigation li {
+.navigation ul li {
     float: left;
 }
 
-ul.navigation li a {
+.navigation ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -145,7 +149,9 @@ ul.navigation li a {
 }
 
 .sticky-nav ul li a.active {
-    border-bottom-width: 4px;
+    border-bottom: 2px solid #3A3A3A;
+    padding-bottom: 0px;
+    border-bottom-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: inherit;
 }
@@ -187,17 +193,11 @@ ul.navigation li a {
     height: auto;
 }
 
-navigation li a {
+navigation ul li a {
     color: #3A3A3A;
     padding-left: 0px;
     padding-right: 0px;
     margin: 0px 16px;
-}
-
-/*#sticky-menu ul.navigation li a.active {*/
-navigation li a.active {
-    border-bottom: 2px solid #3A3A3A;
-    padding-bottom: 5px;
 }
 
 .tablet {
@@ -246,11 +246,14 @@ navigation li a.active {
     font-size: 13px;
 }
 
+main {
+    margin-top: 200px;
+}
+
 /* Be the change */
 
 .be-the-change {
     background-color: #EFEFEF !important;
-    margin-top: 200px;
     /*text-align: center;*/
 }
 
@@ -381,40 +384,41 @@ navigation li a.active {
     color: #3A3A3A;
 }
 
-.value-to-oems .a-vast-market {
+.a-vast-market {
     text-align: left;
     padding-left: 50px;
-    margin-top: 200px;
+    padding-top: 80px !important;
+    background-color: #EFEFEF !important;
 }
 
-.value-to-oems .a-vast-market h3 {
+.a-vast-market h3 {
     margin-top: 20px;
 }
 
-.value-to-oems .a-vast-market-images {
-    margin-top: 300px;
+.a-vast-market-images {
+    margin-top: 108px;
     margin-bottom: 500px;
     min-width: 750px;
     position: relative;
 }
 
-.value-to-oems .a-vast-market-images .mechanic-1 {
+.a-vast-market-images .mechanic-1 {
     background: url("images/Mechanic-01.png") no-repeat;
     width: 468px;
     height: 569px;
     position: absolute;
     left: 0;
-    top: -200px;
+    top: -130px;
     z-index: 0;
 }
 
-.value-to-oems .a-vast-market-images .mechanic-2 {
+.a-vast-market-images .mechanic-2 {
     background: url("images/Mechanic-02.png") no-repeat;
     width: 463px;
     height: 562px;
     position: absolute;
     left: 320px;
-    top: -32px;
+    top: 38px;
     z-index: 0;
 }
 
@@ -585,13 +589,6 @@ navigation li a.active {
     margin-right: 20px;
 }
 
-@media only screen and (max-width: 1270px) {
-    .value-to-oems .a-vast-market {
-        text-align: left;
-        padding-left: 0;
-    }
-}
-
 @media only screen and (max-width: 850px) {
     .header {
         padding-left: 10px;
@@ -663,16 +660,12 @@ navigation li a.active {
         top: -140px;
     }
 
-    .value-to-oems .a-vast-market {
-        margin-top: 150px;
-    }
-
-    .value-to-oems .a-vast-market-images {
+    .a-vast-market-images {
         margin-top: 250px;
         min-width: 435px;
     }
 
-    .value-to-oems .a-vast-market-images .mechanic-1 {
+    .a-vast-market-images .mechanic-1 {
         background: url("images/Mechanic-01-medium.png") no-repeat;
         width: 290px;
         height: 353px;
@@ -680,7 +673,7 @@ navigation li a.active {
         top: -200px;
     }
 
-    .value-to-oems .a-vast-market-images .mechanic-2 {
+    .a-vast-market-images .mechanic-2 {
         background: url("images/Mechanic-02-medium.png") no-repeat;
         width: 290px;
         height: 352px;
@@ -712,33 +705,28 @@ navigation li a.active {
         top: -185px;
     }
 
-    .value-to-oems .a-vast-market {
-        margin-top: 150px;
-        padding-left: 0;
-    }
-
     .value-to-oems .value-card {
         min-width: 280px;
     }
 
-    .value-to-oems .a-vast-market-images {
+    .a-vast-market-images {
         margin-top: 200px;
         margin-bottom: 200px;
     }
 
-    .value-to-oems .a-vast-market-images .mechanic-1 {
+    .a-vast-market-images .mechanic-1 {
         background: url("images/Mechanic-01-small.png") no-repeat;
         width: 145px;
         height: 176px;
-        left: calc(50% - 120px);
+        left: calc(50% - 155px);
         top: -200px;
     }
 
-    .value-to-oems .a-vast-market-images .mechanic-2 {
+    .a-vast-market-images .mechanic-2 {
         background: url("images/Mechanic-02-small.png") no-repeat;
         width: 145px;
         height: 176px;
-        left: calc(50% - 20px);
+        left: calc(50% - 55px);
         top: -148px;
     }
 
@@ -751,9 +739,9 @@ navigation li a.active {
     }
 }
 
-@media only screen and (max-width: 420px) {
-    ul.navigation li a {
-        font-size: 8px;
+@media only screen and (max-width: 520px) {
+    .navigation ul li a {
+        font-size: 10px;
         margin: 10px 8px;
     }
 }
@@ -763,7 +751,7 @@ navigation li a.active {
         min-width: 280px !important;
     }
 
-    .value-to-oems .a-vast-market-images, .big-action .mdl-cell {
+    .value-to-oems, .a-vast-market-images, .big-action .mdl-cell {
         min-width: 280px !important;
     }
 
