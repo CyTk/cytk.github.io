@@ -417,10 +417,7 @@
                                 style="margin-top: -1px;margin-left: 10px"
                                 src="images/linkedIn-18x18.png"/></a>
                         </h4>
-                        <p>Co / Founder | Director of Analytics and Engineering: Middleware,
-                            Backend,
-                            Data
-                            Science</p>
+                        <p>Co / Founder | Director of Analytics and Engineering: Middleware, Backend, Data Science</p>
                     </div>
 
                     <div class="mdl-cell mdl-cell--4-col">
@@ -431,8 +428,7 @@
                                 style="margin-top: -1px;margin-left: 10px"
                                 src="images/linkedIn-18x18.png"/></a>
                         </h4>
-                        <p>Co / Founder | Director of Software Development: Mobile, Web,
-                            Middleware</p>
+                        <p>Co / Founder | Director of Software Development: Mobile, Web, Middleware</p>
                     </div>
 
                     <div class="mdl-cell mdl-cell--4-col">
@@ -458,10 +454,7 @@
                                 style="margin-top: -1px;margin-left: 10px"
                                 src="images/linkedIn-18x18.png"/></a>
                         </h4>
-                        <p>Darr started a company with Elon Musk and headed Corp. Dev. for Amazon
-                            under
-                            Jeff
-                            Bezos.</p>
+                        <p>Darr started a company with Elon Musk and headed Corp. Dev. for Amazon under Jeff Bezos.</p>
                     </div>
 
                     <div class="mdl-cell mdl-cell--4-col">
@@ -472,10 +465,7 @@
                                 style="margin-top: -1px;margin-left: 10px"
                                 src="images/linkedIn-18x18.png"/></a>
                         </h4>
-                        <p>Headed Global Warranty Strategy for For Motor Co. Currently working with
-                            GM
-                            to
-                            improve data quality within the warranty supply chain.</p>
+                        <p>Headed Global Warranty Strategy for For Motor Co. Currently working with GM to improve data quality within the warranty supply chain.</p>
                     </div>
 
                     <div class="mdl-cell mdl-cell--4-col">
@@ -487,8 +477,7 @@
                                 style="margin-top: -1px;margin-left: 10px"
                                 src="images/linkedIn-18x18.png"/></a>
                         </h4>
-                        <p>Jack headed technician operations of BMW and Mercedes U.S. and now heads
-                            operations for Motor Werks.</p>
+                        <p>Jack headed technician operations of BMW and Mercedes U.S. and now heads operations for Motor Werks.</p>
                     </div>
                 </div>
             </section>
@@ -531,32 +520,23 @@
 </div>
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--<script src="https://rawgit.com/r3plica/Scrollspy/master/scrollspy.js"></script>-->
+<script src="https://rawgit.com/r3plica/Scrollspy/master/scrollspy.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
-    //$("#nav").scrollspy();
-
-    $("div#advisors").hide();
-
-    $(".navigation li a").on('click', function (event) {
-      $(".active").removeClass("active");
-      $("[href='" + $(this).attr('href') + "']").each(function(index) {
-        $(this).addClass("active");
-      });
-    });
+    $("#nav").scrollspy({ offset: 45 });
 
     $("button#btn-platform").on('click', function () {
       $(this).addClass("selected");
       $("button#btn-advisors").removeClass("selected");
-      $("div#platform").show();
       $("div#advisors").hide();
+      $("div#platform").css("display", "flex");
     });
 
     $("button#btn-advisors").on('click', function () {
       $(this).addClass("selected");
       $("button#btn-platform").removeClass("selected");
-      $("div#advisors").show();
       $("div#platform").hide();
+      $("div#advisors").css("display", "flex");
     });
   });
 </script>
