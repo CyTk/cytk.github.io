@@ -68,6 +68,9 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
+                <a href class="mobile-nav-toggle">
+                    <img src="images/Icon-Menu-Hamburger.svg" alt="Menu">
+                </a>
             </div>
         </div>
 
@@ -109,9 +112,22 @@
         </div>
     </div>
 
+    <nav class="mobile-nav">
+        <a href class="mobile-nav-close">
+            <img src="images/Icon-Menu-Close.svg" alt="Close" />
+        </a>
+
+        <ul class="mobile-menu">
+            <li><a href="#product">Product</a></li>
+            <li><a href="#value">Value</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Main content -->
     <main>
-
         <section class="be-the-change">
             <div class="container">
                 <div class="mdl-grid mdl-grid--no-spacing">
@@ -463,6 +479,10 @@
 <script src="https://rawgit.com/r3plica/Scrollspy/master/scrollspy.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
+
+    var isHeaderSticky = false;
+    var isMenuOpen = false;
+
     $("#nav").scrollspy({ offset: -120 });
 
     $("button#btn-platform").on('click', function () {
@@ -479,20 +499,43 @@
       $("div#advisors").css("display", "flex");
     });
 
-    var isSticky = false
     function checkSticky () {
         var top = window.scrollY || window.scrollTop || 0
 
-        if (!isSticky && top >= 100) {
-            isSticky = true
+        if (!isHeaderSticky && top >= 100) {
+            isHeaderSticky = true
             $('.sticky-nav').addClass('active')
         }
 
-        if (isSticky && top < 100) {
-            isSticky = false
+        if (isHeaderSticky && top < 100) {
+            isHeaderSticky = false
             $('.sticky-nav').removeClass('active')
         }
     }
+
+    function openMenu (e) {
+        e && e.preventDefault();
+        if (!isMenuOpen) {
+            $('.mobile-nav').addClass('active');
+            isMenuOpen = true;
+        }
+    }
+
+    function closeMenu (e) {
+        e && e.preventDefault();
+        if (isMenuOpen) {
+            $('.mobile-nav').removeClass('active');
+            isMenuOpen = false;
+        }
+    }
+
+    function onMenuItemClick (e) {
+        closeMenu()
+    }
+
+    $('.mobile-nav-toggle').on('click', openMenu)
+    $('.mobile-nav-close').on('click', closeMenu)
+    $('.mobile-menu a').on('click', onMenuItemClick)
 
     setInterval(checkSticky, 200)
     checkSticky()
