@@ -291,6 +291,15 @@ navigation ul li a {
 
 .hero-content {
     max-width: 460px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 840px) {
+    .hero-content {
+        margin: 0;
+        text-align: left;
+    }
 }
 
 .hero-content h1 {
@@ -530,7 +539,7 @@ navigation ul li a {
     text-align: center;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 840px) {
     .be-the-change {
         text-align: left;
     }
@@ -551,7 +560,7 @@ navigation ul li a {
     background-color: #F4F4F4;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 840px) {
     .a-vast-market {
         text-align: left;
     }
@@ -562,7 +571,7 @@ navigation ul li a {
     text-align: center;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 840px) {
     .voice-of-customer {
         text-align: left;
     }
