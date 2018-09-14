@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
-    <link rel="stylesheet" href="styles.css?1.1">
+    <link rel="stylesheet" href="styles.css?1.2">
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -79,8 +79,8 @@
                 <div class="hero-content">
                     <h1>Hello, I’m CYTK.<br/>How can I help?</h1>
                     <h3>
-                        The next leap forward in AI-powered virtual assistant technology,
-                        CYTK provides virtual assistant technology to help techs do their
+                        The next leap forward in AI-powered mobile applications,
+                        CYTK provide virtual assistant technology to help techs do their
                         work faster, with greater accuracy and with improved human capability.
                     </h3>
                 </div>
@@ -108,6 +108,9 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+                <a href class="mobile-nav-toggle">
+                    <img src="images/Icon-Menu-Hamburger-Black.svg" alt="Menu">
+                </a>
             </div>
         </div>
     </div>
@@ -131,12 +134,12 @@
         <section class="be-the-change">
             <div class="container">
                 <div class="mdl-grid mdl-grid--no-spacing">
-                    <div class="mdl-cell mdl-cell--5-col mdl-cell--1-offset-desktop content-tiled-images">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop content-tiled-images">
                         <img class="content-image" src="images/ProductionLine-01.jpg" />
                         <img class="content-image" src="images/ProductionLine-02.jpg" />
                     </div>
 
-                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--middle">
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop mdl-cell--middle">
                         <h2 class="content-title">Be the change</h2>
                         <p class="content-lead">
                             Oxford University estimates that 47% of jobs in the US are “at risk”
@@ -238,11 +241,11 @@
                             </li>
                             <li class="feature-item">
                                 <h4>Improve accuracy</h4>
-                                <p>Capturing data in the moment, no more guessing about misspellings or made-up acronyms.</p>
+                                <p>Capturing data through voice dictation versus typing, no more guessing about misspellings or made-up acronyms.</p>
                             </li>
                             <li class="feature-item">
                                 <h4>Drive consistency</h4>
-                                <p>Consistent process execution with greater accuracy.</p>
+                                <p>Consistent and complete process execution with greater accuracy.</p>
                             </li>
                         </ul>
                     </div>
@@ -289,12 +292,12 @@
         <section class="a-vast-market" id="market">
             <div class="container">
                 <div class="mdl-grid mdl-grid--no-spacing">
-                    <div class="mdl-cell mdl-cell--5-col-desktop mdl-cell--1-offset-desktop content-tiled-images">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop content-tiled-images">
                         <img class="content-image" src="images/a-vast-market-1.jpg" />
                         <img class="content-image" src="images/a-vast-market-2.jpg" />
                     </div>
 
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--middle">
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop mdl-cell--middle">
                         <h2 class="content-title">A vast market</h2>
                         <p class="content-lead">
                             The US auto aftermarket is valued at $273.4B, equaling 1.5–2% of the US GDP.
@@ -309,11 +312,11 @@
         <section class="voice-of-customer">
             <div class="container">
                 <div class="mdl-grid mdl-grid--no-spacing">
-                    <div class="mdl-cell mdl-cell--5-col mdl-cell--middle">
+                    <div class="mdl-cell mdl-cell--8-col-tablet mdl-cell--5-col-desktop mdl-cell--middle">
                         <h2 class="content-title">Voice of<br />customer</h2>
                     </div>
 
-                    <div class="mdl-cell mdl-cell--4-col-mobile mdl-cell--3-col-desktop">
+                    <div class="mdl-cell mdl-cell--4-col-mobile mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
                         <div class="feature-tile">
                             <img class="feature-image" src="images/VoiceofCustomer-1.jpg" />
                             <div class="feature-description">
@@ -328,7 +331,7 @@
                         </div>
                     </div>
 
-                    <div class="mdl-cell mdl-cell--4-col-mobile mdl-cell--3-col-desktop">
+                    <div class="mdl-cell mdl-cell--4-col-mobile mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
                         <div class="feature-tile">
                             <img class="feature-image" src="images/VoiceofCustomer-2.jpg" />
                             <div class="feature-description">
@@ -500,7 +503,7 @@
     });
 
     function checkSticky () {
-        var top = window.scrollY || window.scrollTop || 0
+        var top = window.pageYOffset || document.documentElement.scrollTop
 
         if (!isHeaderSticky && top >= 100) {
             isHeaderSticky = true

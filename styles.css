@@ -111,23 +111,16 @@ h4 {
 }
 
 .sticky-nav {
-    display: none;
     width: 100%;
     height: auto;
     margin: 0;
     z-index: 50;
     background-color: #FFFFFF;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease-out, opacity 0s 0.2s;
+    transition: all 0.1s ease-out, opacity 0s 0.2s;
     transform: translate3d(0, -100%, 0);
     will-change: transform;
     opacity: 0;
-}
-
-@media only screen and (min-width: 560px) {
-    .sticky-nav {
-        display: block;
-    }
 }
 
 .sticky-nav.active {
@@ -269,8 +262,15 @@ navigation ul li a {
 .header .navbar,
 .sticky-nav .navbar {
     margin: 0;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     height: auto;
+}
+
+@media only screen and (min-width: 560px) {
+    .header .navbar,
+    .sticky-nav .navbar {
+        padding: 1.5rem 0;
+    }
 }
 
 .hero {
@@ -291,6 +291,15 @@ navigation ul li a {
 
 .hero-content {
     max-width: 460px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 840px) {
+    .hero-content {
+        margin: 0;
+        text-align: left;
+    }
 }
 
 .hero-content h1 {
@@ -530,7 +539,7 @@ navigation ul li a {
     text-align: center;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 840px) {
     .be-the-change {
         text-align: left;
     }
@@ -551,7 +560,7 @@ navigation ul li a {
     background-color: #F4F4F4;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 840px) {
     .a-vast-market {
         text-align: left;
     }
@@ -562,7 +571,7 @@ navigation ul li a {
     text-align: center;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 840px) {
     .voice-of-customer {
         text-align: left;
     }
