@@ -500,7 +500,7 @@ navigation ul li a {
 }
 
 .feature-list p {
-    line-height: 1.45;
+     line-height: 1.45;
     font-size: 1.125rem;
     font-weight: bold;
     color: rgba(58, 58, 58, 0.7);
@@ -818,4 +818,18 @@ navigation ul li a {
     url('fonts/alrightsans-regular-v3-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+/* Privacy Policy */
+.privacy-policy p {
+     line-height: 1.45;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: rgba(58, 58, 58, 0.7);
+}
+
+.privacy-policy h3 {
+    margin-bottom: 1rem;
+    font-size: 1.625rem;
+    color: #136CFB;
 }
