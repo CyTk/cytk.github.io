@@ -488,41 +488,41 @@
                         <div id="mdl-custom-modal" class="modal">
                             <div class="modal-content mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand">
-                                    <form id="contact-form" action="index.html" method="post"  onSubmit="form.submit();">
+                                    <form id="contact-form" method="post">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" pattern="^\s*[0-9a-zA-Z][0-9a-zA-Z ]*$" id="mdl-name">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-name" name="name">
                                             <label class="mdl-textfield__label" for="mdl-name">Name</label>
                                         </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' id="mdl-email">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-email" name="email">
                                             <label class="mdl-textfield__label" for="mdl-email">E-mail</label>
                                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                             <span class="mdl-textfield__error">E-mail is not valid!</span>
                                         </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" pattern="^[\s()+-]*([0-9][\s()+-]*){6,20}$" id="mdl-phone">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-phone" name="phone">
                                             <label class="mdl-textfield__label" for="mdl-phone">Phone</label>
                                             <span class="mdl-textfield__error">Input is not a number!</span>
                                         </div>
                                         <div class="mdl-select mdl-js-textfield mdl-textfield--floating-label">
-                                            <label class="mdl-select__label" for="mdl-interest">Interest</label>
+                                            <label class="mdl-select__label" for="mdl-interest">Interest:</label>
                                             <small id="emailHelp" class="form-text text-muted">What aspect of CYTK interests you?</small>
-                                            <select class="mdl-select__input" id="mdl-interest">
-                                                <option>Select Choice</option>
-                                                <option>Pilot Program</option>
-                                                <option>Dealership</option>
-                                                <option>Independent Repair Shop</option>
-                                                <option>Mechanic</option>
-                                                <option>Investor</option>
+                                            <select class="mdl-select__input" id="mdl-interest" name="interest">
+                                                <option value="null">Select Choice</option>
+                                                <option value="pilot">Pilot Program</option>
+                                                <option value="dealer">Dealership</option>
+                                                <option value="indy">Independent Repair Shop</option>
+                                                <option value="mechanic">Mechanic</option>
+                                                <option value="investor">Investor</option>
                                             </select>
                                         </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <label class="mdl-textfield__label" for="mdl-source">How did you hear about us?</label>
-                                            <input type="text" class="mdl-textfield__input" id="mdl-source">
+                                            <input type="text" class="mdl-textfield__input" id="mdl-source" name="source">
                                         </div>
                                         <div class="mdl-textarea">
                                             <label class="mdl-textarea__label" for="mdl-message">Message</label>
-                                            <textarea class="mdl-textarea__input" id="mdl-message" rows="4" cols="40"></textarea>
+                                            <textarea class="mdl-textarea__input" id="mdl-message" rows="4" cols="40" name="message"></textarea>
                                         </div> 
 
                                         <div class="mdl-card__actions mdl-card--border">
@@ -631,7 +631,41 @@
   });
 </script>
 <!-- modal window assets -->
+<script type="text/javascript">
+        (() => {
+          const form = document.querySelector('form');
+          const formResponse = document.querySelector('js-form-response');
+          form.onsubmit = e => {
+            e.preventDefault();
+            // Prepare data to send
+            const data = {};
+            const formElements = Array.from(form);
+            formElements.map(input => (data[input.name] = input.value));
+            // Log what our lambda function will receive
+            console.log(JSON.stringify(data));
+            // Construct an HTTP request
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+            // Send the collected data as JSON
+            xhr.send(JSON.stringify(data));
+            // Callback function
+            xhr.onloadend = response => {
+              if (response.target.status === 200) {
+                // The form submission was successful
+                form.reset();
+                //formResponse.innerHTML = 'Thanks for the message. We will be in touch shortly.';
+              } else {
 
+                // The form submission failed
+               // formResponse.innerHTML = 'Something went wrong';
+                console.error(JSON.parse(response.target.response).message);
+              }
+            };
+          };
+        })();
+</script>
 <script>
   window.console = window.console || function(t) {};
 </script>
