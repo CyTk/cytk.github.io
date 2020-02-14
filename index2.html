@@ -79,7 +79,7 @@
 .mdl-card__actions { background-color: rgba(222, 222, 222, 0.25); }   
 .mdl-textfield, .mdl-textfield__input { 
     padding: 10px 0;
-}                  
+}                 
 </style>
 </head>
 <body>
@@ -506,10 +506,14 @@
                                             <label class="mdl-textfield__label" for="mdl-name">Name</label>
                                         </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="mdl-email" name="email" required>
+                                            <input class="mdl-textfield__input" type="text" id="mdl-email" name="email" aria-controls="email-helper-text"
+         aria-describedby="email-helper-text" required>
                                             <label class="mdl-textfield__label" for="mdl-email">E-mail</label>
-                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                            <!-- span class="mdl-textfield__error">E-mail is not valid!</span -->
+                                        </div>
+                                        <div class="mdc-text-field-helper-line">
+                                          <small id="email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                            We'll never share your email with anyone else.
+                                          </small>
                                         </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="mdl-phone" name="phone">
