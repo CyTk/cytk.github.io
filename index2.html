@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+          content="CYTK provides virtual assistant technology to help techs do their work safer, faster, and with greater accuracy.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-114653709-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+
+    <title>CYTK</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+    <link rel="stylesheet" href="styles.css?1.2">
+    <style>
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-content {
+    margin: 10% auto;
+    border-radius:5px
+}
+
+.mdl-card__actions { background-color: rgba(222, 222, 222, 0.25); }                        
+</style>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <a class="anchor" id="top"></a>
+
+    <header class="header mdl-layout__header mdl-layout__header--scroll ">
+        <!-- Navigation -->
+        <div class="container">
+            <div class="navbar mdl-layout__header-row">
+                <a href="#top">
+                    <img src="images/logo.svg" width="110" height="42"/>
+                </a>
+                <div class="mdl-layout-spacer"></div>
+                <div class="navigation">
+                    <ul>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#value">Value</a></li>
+                        <li><a href="#market">Market</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <a href class="mobile-nav-toggle">
+                    <img src="images/Icon-Menu-Hamburger.svg" alt="Menu">
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Hello, I’m CYTK.<br/>How can I help?</h1>
+                    <h3>
+                        The next leap forward in AI-powered mobile applications,
+                        CYTK provides virtual assistant technology to help techs do their
+                        work faster, with greater accuracy and with improved human capability.
+                    </h3>
+                </div>
+                <div class="hero-media">
+                    <img class="hero-mockup" src="images/CYTK-Mockup3.png" alt="CYTK" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sticky navigation -->
+    <div class="fixed sticky-nav">
+        <div class="container">
+            <div class="navbar mdl-layout__header-row">
+                <a href="#top">
+                    <img src="images/logo-alt.svg" width="110" height="42"/>
+                </a>
+                <div class="mdl-layout-spacer"></div>
+                <nav id="nav" class="navigation">
+                    <ul>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#value">Value</a></li>
+                        <li><a href="#market">Market</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href class="mobile-nav-toggle">
+                    <img src="images/Icon-Menu-Hamburger-Black.svg" alt="Menu">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="mobile-nav">
+        <a href class="mobile-nav-close">
+            <img src="images/Icon-Menu-Close.svg" alt="Close" />
+        </a>
+
+        <ul class="mobile-menu">
+            <li><a href="#product">Product</a></li>
+            <li><a href="#value">Value</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <section class="be-the-change">
+            <div class="container">
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop content-tiled-images">
+                        <img class="content-image" src="images/ProductionLine-01.jpg" />
+                        <img class="content-image" src="images/ProductionLine-02.jpg" />
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop mdl-cell--middle">
+                        <h2 class="content-title">Be the change</h2>
+                        <p class="content-lead">
+                            Oxford University estimates that 47% of jobs in the US are “at risk”
+                            of being automated in the next 20 years.
+                        </p>
+                        <div class="content-body">
+                            <p>
+                                CYTK was founded on the principle that humans and technology must not
+                                be mutually exclusive. Humans and technology must work together, enabling
+                                far greater impact than they ever could in isolation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-friend" id="product">
+            <div class="container">
+                <div class="content-header">
+                    <h2 class="content-title">A tech’s best friend</h2>
+                    <h3 class="content-subtitle">
+                        CYTK’s core features aim to make tech’s lives easier –
+                        saving time and money in the process.
+                    </h3>
+                </div>
+
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/Icon-HandsFree.svg" /></div>
+                            <h3 class="feature-title">Hands-free operation</h3>
+                            <p class="feature-description">
+                                A combination of iOS and Android smart phones along with Bluetooth
+                                IoT devices enables technicians to work hands free.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/Icon-Search.svg" /></div>
+                            <h3 class="feature-title">Smart Search</h3>
+                            <p class="feature-description">
+                                CYTK enables universal search on any part or procedure without the
+                                technician having to set down their tools or move from the bay.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/Icon-Smart-Workflow.svg" /></div>
+                            <h3 class="feature-title">Smart Workflow</h3>
+                            <p class="feature-description">
+                                CYTK provides a suite of AI powered mobile apps that helps technicians
+                                work through their workflows faster, with higher quality and an increase
+                                in job satisfaction. Workflow examples include: Repair Processes, Vehicle
+                                Inspections and Pin-Point Tests.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/Icon-CloudUpload.svg" /></div>
+                            <h3 class="feature-title">Natural language processing</h3>
+                            <p class="feature-description">
+                                The CYTK NLU engine has micro control over the converstation flow.
+                                Our NLU engine “harmonizes” between technician’s intent and the task
+                                itself seamlessly and via an active learning environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="value" class="value-to-oems">
+            <div class="container">
+                <div class="content-header">
+                    <h2 class="content-title">Value proposition</h2>
+                    <h3 class="content-subtitle">
+                        CYTK provides a range of benefits for technicans, shops and OEM’s.
+                    </h3>
+                </div>
+
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col-desktop feature-list">
+                        <h3 class="feature-title">Cause</h3>
+                        <ul class="feature-items">
+                            <li class="feature-item">
+                                <h4>Save time</h4>
+                                <p>Vehicle information, specifications, how-to guides: presented instantly and contextually to the task at hand.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Expand human capability</h4>
+                                <p>Seamless, real-time access to key vehicle information and procedures will improve the capability of technicians.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Improve accuracy</h4>
+                                <p>Capturing data through voice dictation versus typing, no more guessing about misspellings or made-up acronyms.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Drive consistency</h4>
+                                <p>Consistent and complete process execution with greater accuracy.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col-desktop feature-list">
+                        <h3 class="feature-title">Effect</h3>
+                        <ul class="feature-items">
+                            <li class="feature-item">
+                                <h4>Drive operational efficiency</h4>
+                                <p>Improve individual and overall shop productivity and efficiency.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Knowledge</h4>
+                                <p>Expanded human capability will enable continuous learning and knowledge.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Quality</h4>
+                                <p>Improved data accuracy and consistent process execution will drive overall shop quality. </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col-desktop feature-list">
+                        <h3 class="feature-title">Benefit</h3>
+                        <ul class="feature-items">
+                            <li class="feature-item">
+                                <h4>Return on investment</h4>
+                                <p>Quality execution, reduced cost, improved output and increased revenue.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Employee satisfaction</h4>
+                                <p>Making the human interaction with technology more seamless will expand capability and improve satisfaction within the work environment.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Customer satisfaction & loyalty</h4>
+                                <p>Consistent process execution with high quality will drive overall customer satisfaction and owner loyalty.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="a-vast-market" id="market">
+            <div class="container">
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop content-tiled-images">
+                        <img class="content-image" src="images/a-vast-market-3.jpg" />
+                        <img class="content-image" src="images/a-vast-market-1.jpg" />
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop mdl-cell--middle">
+                        <h2 class="content-title">A vast market</h2>
+                        <p class="content-lead">
+                            The US auto aftermarket is valued at $273.4B, equaling 1.5–2% of the US GDP.
+                            The US auto dealership market is valued at $33B. A handful of companies control
+                            both marketplaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="voice-of-customer">
+            <div class="container">
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--8-col-tablet mdl-cell--5-col-desktop mdl-cell--middle">
+                        <h2 class="content-title">Voice of<br />customer</h2>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col-mobile mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                        <div class="feature-tile">
+                            <img class="feature-image" src="images/VoiceofCustomer-1.jpg" />
+                            <div class="feature-description">
+                                <p>67% of technicians take over 3 minutes to find required information on each repair. 35% take over 5 minutes per repair.</p>
+                            </div>
+                        </div>
+                        <div class="feature-tile">
+                            <img class="feature-image" src="images/VoiceofCustomer-3.jpg" />
+                            <div class="feature-description">
+                                <p>60% of technicians are using their cell phones to look up vehicle repair information.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col-mobile mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                        <div class="feature-tile">
+                            <img class="feature-image" src="images/VoiceofCustomer-2.jpg" />
+                            <div class="feature-description">
+                                <p>61% state that voice is imperative when their hands and vision are occupied.</p>
+                            </div>
+                        </div>
+                        <div class="feature-tile">
+                            <img class="feature-image" src="images/VoiceofCustomer-4.jpg" />
+                            <div class="feature-description">
+                                <p>40% of technicians are searching and viewing YouTube vidoes for vehicle repair.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="who-s-involved" id="team">
+            <div class="container">
+                <div class="content-header">
+                    <h2 class="content-title">Who’s involved?</h2>
+                    <div class="team-switch">
+                        <button id="btn-platform" class="toggle-button selected">Platform</button>
+                        <button id="btn-advisors" class="toggle-button">Advisors</button>
+                    </div>
+                </div>
+
+                <div id="platform" class="team-grid">
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-BryanLevenson.jpg"/>
+                        <h4 class="person-name">Bryan Levenson<a href="https://www.linkedin.com/in/bryanlevenson/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Founder | CEO: Business Development, Operations, Product</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-DavidZiegler.jpg"/>
+                        <h4 class="person-name">David Ziegler<a href="https://www.linkedin.com/in/dave-ziegler-automotive-consultant-a37798149/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Director, Operations, Customer Success</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-LukeStewart.jpg"/>
+                        <h4 class="person-name">Luke Stewart<a href="https://www.linkedin.com/in/lukestewart13/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Co-Founder | Director of Engineering: Middleware, Backend, Data Science</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-JorgeOlmos.jpg"/>
+                        <h4 class="person-name">Jorge Olmos<a href="https://www.linkedin.com/in/jorgeolmos/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Co-Founder | Director of Software Development: Mobile, Web, Middleware</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-PatrickWienkam.jpg"/>
+                        <h4 class="person-name">Patrick Weinkam<a href="https://www.linkedin.com/in/patrick-weinkam-6b579513/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Co-Founder | CTO: Cloud, Backend, Data Science</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-MartinGregory.jpg"/>
+                        <h4 class="person-name">Martin Gregory<a href="https://www.linkedin.com/in/martingregory/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Co-Founder | Director of Software Development: Mobile, Web, Middleware</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-Josephmark.png"/>
+                        <h4 class="person-name">Josephmark<a href="https://www.linkedin.com/company/josephmark/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">User experience design</p>
+                    </div>
+                </div>
+
+                <div id="advisors" class="team-grid">
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-DarrAley.jpg"/>
+                        <h4 class="person-name">Darr Aley<a href="https://www.linkedin.com/in/darr-aley-631769/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">
+                            Mr. Aley worked with Jeff Bezos and Elon Musk in areas that include mergers and
+                            acquisitions, business development, strategy, and operations. As an entrepreneur
+                            he has started, invested, and/or joined companies in every stage of development
+                            (napkin to IPO) and seen them through to billions of dollars in exit value.
+                        </p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-KirkBradley.png"/>
+                        <h4 class="person-name">Kirk Bradley<a href="https://www.linkedin.com/in/bradleykirk/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">
+                            Mr. Bradley is currently an Executive Technical Advisor at Oracle Corporation
+                            (NASDAQ: ORCL). He is one of the original technologists and among the longest
+                            serving employees of Oracle. In conjunction with investing in CYTK, Mr. Bradley
+                            will also be making significant contributions as a Technology Advisor.
+                        </p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-DougAley.jpg"/>
+                        <h4 class="person-name">Doug Aley<a href="https://www.linkedin.com/in/dougaley/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">
+                            Mr. Aley has been integral product and operations lead at companies such Ever AI,
+                            Amazon, Zulily, and Minted. Doug is an operating partner at Atomic Ventures in San
+                            Francisco, who has several of the world’s best technology entrepreneurs as LPs. 
+                        </p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-MikeRoberts.jpg"/>
+                        <h4 class="person-name">Mike Roberts<a href="https://www.linkedin.com/in/mike-roberts-756a227/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">
+                            Mr. Roberts Global Warranty Strategy for Ford Motor Co. Currently working with GM to
+                            improve data quality within the warranty supply chain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer" id="contact">
+            <div class="contact">
+                <div class="container">
+
+                    <div class="contact-content">
+                        <h2 class="contact-title">Let’s chat</h2>
+                        
+                        <a id="mdl-custom-btn" class="contact-email">
+                            Contact CYTK
+                            <img src="images/Contact-Chevron.svg" />
+                        </a>
+
+                        <!--modal form -->
+                        <div id="mdl-custom-modal" class="modal">
+                            <div class="modal-content mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <form id="contact-form" action="https://contact.cytk.io/message" method="post">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-name" name="name">
+                                            <label class="mdl-textfield__label" for="mdl-name">Name</label>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-email" name="email" required>
+                                            <label class="mdl-textfield__label" for="mdl-email">E-mail</label>
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            <!-- span class="mdl-textfield__error">E-mail is not valid!</span -->
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-phone" name="phone">
+                                            <label class="mdl-textfield__label" for="mdl-phone">Phone</label>
+                                            <span class="mdl-textfield__error">Input is not a number!</span>
+                                        </div>
+                                        <div class="mdl-select mdl-js-textfield mdl-textfield--floating-label">
+                                            <label class="mdl-select__label" for="mdl-interest">Interest:</label>
+                                            <small id="emailHelp" class="form-text text-muted">What aspect of CYTK interests you?</small>
+                                            <select class="mdl-select__input" id="mdl-interest" name="interest">
+                                                <option value="null">Select Choice</option>
+                                                <option value="pilot">Pilot Program</option>
+                                                <option value="dealer">Dealership</option>
+                                                <option value="indy">Independent Repair Shop</option>
+                                                <option value="mechanic">Mechanic</option>
+                                                <option value="investor">Investor</option>
+                                            </select>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <label class="mdl-textfield__label" for="mdl-source">How did you hear about us?</label>
+                                            <input type="text" class="mdl-textfield__input" id="mdl-source" name="source">
+                                        </div>
+                                        <div class="mdl-textarea">
+                                            <label class="mdl-textarea__label" for="mdl-message">Message</label>
+                                            <textarea class="mdl-textarea__input" id="mdl-message" rows="4" cols="40" name="message"></textarea>
+                                        </div> 
+
+                                        <div class="mdl-card__actions mdl-card--border">
+                                            <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <span style="display: none; margin: 15px;" class="mdl-chip">
+                                    <span id="js-form-response" class="mdl-chip__text"></span>
+                                </span>
+                                <div class="mdl-card__menu">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-custom-close">
+                                      <span class="material-icons">close</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end modal form -->
+
+                        <div class="contact-socials">
+                            <a href="https://www.linkedin.com/company/cytk/" target="_blank">
+                                <img src="images/Contact-LinkedIn.svg" alt="LinkedIn" />
+                            </a>
+                            <a href="https://twitter.com/CYTK_Assistant" target="_blank">
+                                <img src="images/Contact-Twitter.svg" alt="Twitter" />
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="baseplate">
+                <div class="container">
+                    <a style="color: #fff;" href="privacy-policy.html">Privacy Policy</a>
+                    <p class="copyright">© CYTK 2020. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://rawgit.com/r3plica/Scrollspy/master/scrollspy.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+
+    var isHeaderSticky = false;
+    var isMenuOpen = false;
+
+    $("#nav").scrollspy({ offset: -120 });
+
+    $("button#btn-platform").on('click', function () {
+      $(this).addClass("selected");
+      $("button#btn-advisors").removeClass("selected");
+      $("div#advisors").hide();
+      $("div#platform").css("display", "flex");
+    });
+
+    $("button#btn-advisors").on('click', function () {
+      $(this).addClass("selected");
+      $("button#btn-platform").removeClass("selected");
+      $("div#platform").hide();
+      $("div#advisors").css("display", "flex");
+    });
+
+    function checkSticky () {
+        var top = window.pageYOffset || document.documentElement.scrollTop
+
+        if (!isHeaderSticky && top >= 100) {
+            isHeaderSticky = true
+            $('.sticky-nav').addClass('active')
+        }
+
+        if (isHeaderSticky && top < 100) {
+            isHeaderSticky = false
+            $('.sticky-nav').removeClass('active')
+        }
+    }
+
+    function openMenu (e) {
+        e && e.preventDefault();
+        if (!isMenuOpen) {
+            $('.mobile-nav').addClass('active');
+            isMenuOpen = true;
+        }
+    }
+
+    function closeMenu (e) {
+        e && e.preventDefault();
+        if (isMenuOpen) {
+            $('.mobile-nav').removeClass('active');
+            isMenuOpen = false;
+        }
+    }
+
+    function onMenuItemClick (e) {
+        closeMenu()
+    }
+
+    $('.mobile-nav-toggle').on('click', openMenu)
+    $('.mobile-nav-close').on('click', closeMenu)
+    $('.mobile-menu a').on('click', onMenuItemClick)
+
+    setInterval(checkSticky, 200)
+    checkSticky()
+  });
+</script>
+<!-- modal window assets -->
+<script type="text/javascript">
+        (() => {
+          const form = document.querySelector('form');
+          const formResponse = document.querySelector('#js-form-response');
+          form.onsubmit = e => {
+            e.preventDefault();
+            // Prepare data to send
+            const data = {};
+            const formElements = Array.from(form);
+            formElements.map(input => (data[input.name] = input.value));
+            // Log what our lambda function will receive
+            console.log(JSON.stringify(data));
+            // Construct an HTTP request
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+            // Send the collected data as JSON
+            xhr.send(JSON.stringify(data));
+            // Callback function
+            xhr.onloadend = response => {
+              if (response.target.status === 200) {
+                // The form submission was successful
+                alert("successful submission");
+                form.reset();
+                formResponse.innerHTML = 'We will be in touch shortly, thank you!';
+                formResponse.parentElement.style.backgroundColor = "lime";
+              } else {
+                // The form submission failed
+                alert("failed submission");
+                formResponse.innerHTML = 'Something went wrong, please try again.';
+                formResponse.parentElement.style.backgroundColor = "red";
+              }
+              formResponse.parentElement.style.display = "block";
+            };
+          };
+        })();
+</script>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script type="text/javascript">
+var modal = document.getElementById('mdl-custom-modal'),
+    btn = document.getElementById('mdl-custom-btn'),
+    close = document.getElementsByClassName('mdl-custom-close')[0];
+
+btn.onclick = function() {
+    'use strict';
+    modal.style.display = "block";
+    const formResponse = document.querySelector('#js-form-response').
+    formResponse.innerHTML = '';
+    formResponse.parentElement.style.display = "none";
+    document.querySelector('form').reset();
+}
+
+close.onclick = function() {
+    'use strict';   
+    modal.style.display = "none";
+}
+
+/* Use if you whant to close modal when click outside of modal window */
+window.onclick = function(event) {
+    'use strict';
+    
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+<!-- end modal window assets -->
+</body>
+</html>
