@@ -485,7 +485,7 @@
                         </a>
 
                         <!--modal form -->
-                        <div id="mdl-custom-modal" class="modal">
+                        <div id="mdl-custom-modal" class="modal" style="padding: 20px;">
                             <div class="modal-content mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand">
                                     <form id="contact-form" action="https://contact.cytk.io/message" method="post">
@@ -532,12 +532,16 @@
                                         </div>
                                     </form>
                                 </div>
+                                <span style="display: none; margin: 15px;" class="mdl-chip">
+                                    <span id="js-form-response" class="mdl-chip__text"></span>
+                                </span>
                                 <div class="mdl-card__menu">
                                     <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-custom-close">
                                       <span class="material-icons">close</span>
                                     </button>
                                 </div>
                             </div>
+
                         </div>
                         <!-- end modal form -->
 
@@ -634,7 +638,7 @@
 <script type="text/javascript">
         (() => {
           const form = document.querySelector('form');
-          const formResponse = document.querySelector('js-form-response');
+          const formResponse = document.querySelector('#js-form-response');
           form.onsubmit = e => {
             e.preventDefault();
             // Prepare data to send
@@ -655,13 +659,14 @@
               if (response.target.status === 200) {
                 // The form submission was successful
                 form.reset();
-                //formResponse.innerHTML = 'Thanks for the message. We will be in touch shortly.';
+                formResponse.innerHTML = 'Thanks for the message. We will be in touch shortly.';
+                formResponse.parentElement.style.backgroundColor = "lime";
               } else {
-
                 // The form submission failed
-               // formResponse.innerHTML = 'Something went wrong';
-                console.error(JSON.parse(response.target.response).message);
+                formResponse.innerHTML = 'Something went wrong, please try again.';
+                formResponse.parentElement.style.backgroundColor = "red";
               }
+              formResponse.parentElement.style.display = "block";
             };
           };
         })();
@@ -677,6 +682,10 @@ var modal = document.getElementById('mdl-custom-modal'),
 btn.onclick = function() {
     'use strict';
     modal.style.display = "block";
+    const formResponse = document.querySelector('#js-form-response').
+    formResponse.innerHTML = '';
+    formResponse.parentElement.style.display = "none";
+    document.querySelector('form').reset();
 }
 
 close.onclick = function() {
