@@ -494,10 +494,10 @@
                                             <label class="mdl-textfield__label" for="mdl-name">Name</label>
                                         </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="mdl-email" name="email">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-email" name="email" required>
                                             <label class="mdl-textfield__label" for="mdl-email">E-mail</label>
                                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                            <span class="mdl-textfield__error">E-mail is not valid!</span>
+                                            <!-- span class="mdl-textfield__error">E-mail is not valid!</span -->
                                         </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="mdl-phone" name="phone">
@@ -658,11 +658,13 @@
             xhr.onloadend = response => {
               if (response.target.status === 200) {
                 // The form submission was successful
+                alert("successful submission");
                 form.reset();
-                formResponse.innerHTML = 'Thanks for the message. We will be in touch shortly.';
+                formResponse.innerHTML = 'We will be in touch shortly, thank you!';
                 formResponse.parentElement.style.backgroundColor = "lime";
               } else {
                 // The form submission failed
+                alert("failed submission");
                 formResponse.innerHTML = 'Something went wrong, please try again.';
                 formResponse.parentElement.style.backgroundColor = "red";
               }
