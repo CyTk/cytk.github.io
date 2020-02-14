@@ -63,8 +63,16 @@
 }
 
 .modal-content {
-    margin: 10% auto;
+    margin: 15% auto;
     border-radius:5px
+}
+
+.contact-email {
+    cursor: pointer;
+}
+
+.mdl-chip {
+    text-align: center;
 }
 
 .mdl-card__actions { background-color: rgba(222, 222, 222, 0.25); }                        
@@ -488,7 +496,7 @@
                         <div id="mdl-custom-modal" class="modal">
                             <div class="modal-content mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand">
-                                    <form id="contact-form" action="https://contact.cytk.io/message" method="post">
+                                    <form id="contact-form" action="" method="post">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="mdl-name" name="name">
                                             <label class="mdl-textfield__label" for="mdl-name">Name</label>
@@ -658,13 +666,11 @@
             xhr.onloadend = response => {
               if (response.target.status === 200) {
                 // The form submission was successful
-                alert("successful submission");
                 form.reset();
                 formResponse.innerHTML = 'We will be in touch shortly, thank you!';
                 formResponse.parentElement.style.backgroundColor = "lime";
               } else {
                 // The form submission failed
-                alert("failed submission");
                 formResponse.innerHTML = 'Something went wrong, please try again.';
                 formResponse.parentElement.style.backgroundColor = "red";
               }
@@ -683,6 +689,7 @@ var modal = document.getElementById('mdl-custom-modal'),
 
 btn.onclick = function() {
     'use strict';
+    btn.disabled = true;
     modal.style.display = "block";
     const formResponse = document.querySelector('#js-form-response').
     formResponse.innerHTML = '';
