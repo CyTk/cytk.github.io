@@ -719,6 +719,7 @@ navigation ul li a {
     font-weight: bold;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .contact-email img {
