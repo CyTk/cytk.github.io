@@ -50,22 +50,32 @@
     <style>
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+
+*{box-sizing: border-box;padding: 0;margin: 0;outline: none;}
+
+
+select {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
-    top: 0;
+    top: 0; bottom: 0; right: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.25);
+    /*overflow: hidden;*/
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-    margin: 15% auto;
-    margin-top: 25%;
-    border-radius:5px
+    position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);
+    border-radius: 5px;
 }
 
 .contact-email {
@@ -76,10 +86,39 @@
     text-align: center;
 }
 
-.mdl-card__actions { background-color: rgba(222, 222, 222, 0.25); }   
-.mdl-textfield, .mdl-textfield__input { 
+.mdl-card__actions {padding: 20px 0;}  
+.mdl-button{}
+.mdl-button.mdl-button--colored{display: block; padding: 12px 32px; border: 1px solid #1058cb; border-radius: 5px;
+font-size: 16px; line-height: 1; width: 100%;} 
+.mdl-button.mdl-button--colored:hover{background-color:#1058cb; color: #fff; }
+/*.mdl-textfield, .mdl-textfield__input { 
     padding: 10px 0;
-}                 
+} */     
+
+#contact-form .mdl-button.mdl-button--colored.mdl-js-button{height: auto;}
+
+.mdl-textfield{margin: 2px 0; width: 100%; display: block;}
+
+.mdl-card{overflow: visible;}
+textarea { height: 100px; resize: vertical; font-size: 14px; padding: 10px; width: 100%;}
+
+.mdl-card__menu{right:0px; top:-32px; position:absolute; background-color: #fff; border-radius: 5px;}
+#mdl-custom-btn{padding: 8px 0; display: inline-block;}
+.contact-email img{margin-top: -7px;}
+@media(max-width: 600px){
+    #mdl-custom-btn{border-bottom: 1px dotted #fff; }
+    .modal-content.mdl-card.mdl-shadow--2dp{width: 90%;  margin: auto; height:84vh;}
+    .mdl-card__title.mdl-card--expand{display: block; overflow: auto; height:100%;}
+}
+
+@media(min-width: 768px){
+    #mdl-custom-btn{border-bottom: 1px dotted #fff; padding: 8px 0; display: inline-block;}
+    
+}
+
+@media(min-width: 1200px){#mdl-custom-btn{border-bottom: 0; padding: 8px 0; display: inline-block;}}
+
+
 </style>
 </head>
 <body>
@@ -508,7 +547,7 @@
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="mdl-email" name="email" aria-controls="email-helper-text"
          aria-describedby="email-helper-text" required>
-                                            <label class="mdl-textfield__label" for="mdl-email">E-mail</label>
+                                            <label class="mdl-textfield__label" for="mdl-email">Email</label>
                                         </div>
                                         <div class="mdc-text-field-helper-line">
                                           <small id="email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
