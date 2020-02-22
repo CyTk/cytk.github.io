@@ -529,7 +529,7 @@ textarea { height: 100px; resize: vertical; font-size: 14px; padding: 10px; widt
 
                     <div class="contact-content">
                         <h2 class="contact-title">Let’s chat</h2>
-                        
+
                         <a id="mdl-custom-btn" class="contact-email">
                             Contact CYTK
                             <img src="images/Contact-Chevron.svg" />
@@ -578,7 +578,7 @@ textarea { height: 100px; resize: vertical; font-size: 14px; padding: 10px; widt
                                         <div class="mdl-textarea">
                                             <label class="mdl-textarea__label" for="mdl-message">Message</label>
                                             <textarea class="mdl-textarea__input" id="mdl-message" rows="4" cols="40" name="message"></textarea>
-                                        </div> 
+                                        </div>
 
                                         <div class="mdl-card__actions mdl-card--border">
                                             <button class="mdl-button mdl-button--colored mdl-js-button">
@@ -691,11 +691,30 @@ textarea { height: 100px; resize: vertical; font-size: 14px; padding: 10px; widt
 </script>
 <!-- modal window assets -->
 <script type="text/javascript">
-        (() => {
+    function isValidEmailAddress(emailAddress) {
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        return pattern.test(emailAddress);
+        }
+       (() => {
           const form = document.querySelector('form');
           const formResponse = document.querySelector('#js-form-response');
           form.onsubmit = e => {
-            e.preventDefault();
+                 e.preventDefault();
+                 formResponse.parentElement.style.display = "none";
+              var emailVal = $('#mdl-email').val();
+              if(emailVal===""){
+                    formResponse.innerHTML = 'Email is required.';
+                    formResponse.style.color = "white";
+                    formResponse.parentElement.style.backgroundColor = "red";
+                    formResponse.parentElement.style.display = "block";
+                    return false;
+              } else if(!isValidEmailAddress(emailVal)){
+                    formResponse.innerHTML = 'Email is not valid.';
+                    formResponse.style.color = "white";
+                    formResponse.parentElement.style.backgroundColor = "red";
+                    formResponse.parentElement.style.display = "block";
+                    return false;
+                }
             // Prepare data to send
             const data = {};
             const formElements = Array.from(form);
