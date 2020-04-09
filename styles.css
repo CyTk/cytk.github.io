@@ -456,14 +456,21 @@ navigation ul li a {
     display: flex;
     align-content: center;
     justify-content: center;
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 32px;
+    width: 100px; /* krs change from 140 */
+    height: 100px; /* krs change from 140 */
+    margin: 0 auto 12px; /* krs change from 0 auto 32px */
     border-radius: 50%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     background: #fff;
 }
 
+/* KRS addition */
+.img-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 /*
  * List features
  */
@@ -484,6 +491,7 @@ navigation ul li a {
 }
 
 .feature-list .feature-item {
+    min-height: 97px; /* krs addition */
     max-width: 340px;
     margin-bottom: 1.5rem;
     padding-right: 2rem;
@@ -535,8 +543,18 @@ navigation ul li a {
  */
 
 .be-the-change {
-    margin: 126px 0;
+    margin-top: 21px;
+    margin-bottom: 5px;
+    margin-right: 0;
+    margin-left: 0;
     text-align: center;
+    font-weight: bold;
+}
+
+/* custom KRS */
+.content-header.hero-spacer {
+    max-width: 800px;
+    margin: auto;
 }
 
 @media only screen and (min-width: 840px) {
