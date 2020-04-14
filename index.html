@@ -64,8 +64,14 @@
 
 .modal-content {
     margin: 15% auto;
-    margin-top: 25%;
+    /* margin-top: 25%; */
     border-radius:5px
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    margin-top: 25%;
 }
 
 .contact-email {
@@ -79,8 +85,9 @@
 .mdl-card__actions { background-color: rgba(222, 222, 222, 0.25); }   
 .mdl-textfield, .mdl-textfield__input { 
     padding: 10px 0;
-}                 
+}               
 </style>
+
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -98,7 +105,7 @@
                     <ul>
                         <li><a href="#product">Product</a></li>
                         <li><a href="#value">Value</a></li>
-                        <li><a href="#invest">Invest</a></li>
+                        <li><a href="#market">Market</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -138,7 +145,7 @@
                     <ul>
                         <li><a href="#product">Product</a></li>
                         <li><a href="#value">Value</a></li>
-                        <li><a href="#invest">Invest</a></li>
+                        <li><a href="#market">Market</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -158,7 +165,7 @@
         <ul class="mobile-menu">
             <li><a href="#product">Product</a></li>
             <li><a href="#value">Value</a></li>
-            <li><a href="#invest">Invest</a></li>
+            <li><a href="#market">Market</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -265,7 +272,7 @@
                 <div class="content-header">
                     <h2 class="content-title">Value proposition</h2>
                     <h3 class="content-subtitle">
-                        Real-time access to OEM repair content right at the vehicle.
+                        Real time access to OEM repair content right at the vehicle.
                     </h3>
                 </div>
 
@@ -275,15 +282,15 @@
                         <ul class="feature-items">
                             <li class="feature-item">
                                 <h4>Save time</h4>
-                                <p>Easy real-time access to vehicle specific OEM repair content right at the vehicle.</p>
+                                <p>Easy, immediate access to vehicle specific OEM repair content right at the vehicle.</p>
                             </li>
                             <li class="feature-item">
                                 <h4>Expand human capability</h4>
-                                <p>Seamless, real-time access to key vehicle information and procedures will improve the capability of technicians.</p>
+                                <p>Access to key vehicle information and procedures at the vehicle will improve the capability of technicians.</p>
                             </li>
                             <li class="feature-item">
                                 <h4>Improve repair knowledge & consistency</h4>
-                                <p>Providing easy real-time access to detailed repair procedures, parts and labor estimates, illustrations and vehicle specifications will drive consistent use and improve repair quality.</p>
+                                <p>Providing easy access to detailed repair procedures, parts and labor estimates, illustrations and vehicle specifications will drive consistent use and improve repair quality.</p>
                             </li>
                         </ul>
                     </div>
@@ -315,7 +322,7 @@
                             </li>
                             <li class="feature-item">
                                 <h4>Employee satisfaction</h4>
-                                <p>Making the human interaction with technology more seamless will expand capability and improve satisfaction within the work environment.</p>
+                                <p>Making human interaction with technology seamless will expand capability and improve satisfaction within the work environment.</p>
                             </li>
                             <li class="feature-item">
                                 <h4>Customer satisfaction & loyalty</h4>
@@ -327,7 +334,7 @@
             </div>
         </section>
 
-        <section class="a-vast-market" id="invest">
+        <section class="a-vast-market" id="market">
             <div class="container">
                 <div class="mdl-grid mdl-grid--no-spacing">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop content-tiled-images">
@@ -404,6 +411,12 @@
                     </div>
 
                     <div class="person">
+                        <img class="person-photo" src="images/Headshot-PatrickWienkam.jpg"/>
+                        <h4 class="person-name">Patrick Weinkam<a href="https://www.linkedin.com/in/patrick-weinkam-6b579513/"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Co-Founder | CTO: Cloud, Backend, Data Science</p>
+                    </div>
+
+                    <div class="person">
                         <img class="person-photo" src="images/Headshot-DavidZiegler.jpg"/>
                         <h4 class="person-name">David Ziegler<a href="https://www.linkedin.com/in/dave-ziegler-automotive-consultant-a37798149/"><img src="images/LinkedIn.svg"/></a></h4>
                         <p class="person-role">VP of Operations, Customer Success</p>
@@ -416,12 +429,6 @@
                     </div>
 
                     <div class="person">
-                        <img class="person-photo" src="images/Headshot-PatrickWienkam.jpg"/>
-                        <h4 class="person-name">Patrick Weinkam<a href="https://www.linkedin.com/in/patrick-weinkam-6b579513/"><img src="images/LinkedIn.svg"/></a></h4>
-                        <p class="person-role">Co-Founder | CTO: Cloud, Backend, Data Science</p>
-                    </div>
-
-                    <div class="person">
                         <img class="person-photo" src="images/Headshot-MartinGregory.jpg"/>
                         <h4 class="person-name">Martin Gregory<a href="https://www.linkedin.com/in/martingregory/"><img src="images/LinkedIn.svg"/></a></h4>
                         <p class="person-role">Co-Founder | Director of Software Development: iOS</p>
@@ -430,7 +437,7 @@
                     <div class="person">
                         <img class="person-photo" src="images/Headshot-KateSchneider.jpg"/>
                         <h4 class="person-name">Kate Schneider<a href="https://www.linkedin.com/in/kateschneider707/"><img src="images/LinkedIn.svg"/></a></h4>
-                        <p class="person-role">Director of Product, Marketing</p>
+                        <p class="person-role">Director of Product</p>
                     </div>
 
                 </div>
@@ -507,56 +514,50 @@
          aria-describedby="email-helper-text" required>
                                             <label class="mdl-textfield__label" for="mdl-email">E-mail</label>
                                         </div>
-                                        <div class="mdc-text-field-helper-line">
-                                          <small id="email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
-                                            We'll never share your email with anyone else.
-                                          </small>
-                                        </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="mdl-phone" name="phone">
                                             <label class="mdl-textfield__label" for="mdl-phone">Phone</label>
                                             <span class="mdl-textfield__error">Input is not a number!</span>
                                         </div>
-                                        <div class="mdl-select mdl-js-textfield mdl-textfield--floating-label">
-                                            <label class="mdl-select__label" for="mdl-interest">Interest:</label>
-                                            <small id="emailHelp" class="form-text text-muted">What aspect of CYTK interests you?</small>
-                                            <select class="mdl-select__input" id="mdl-interest" name="interest">
-                                                <option value="null">Select Choice</option>
-                                                <option value="pilot">Pilot Program</option>
-                                                <option value="dealer">Dealership</option>
-                                                <option value="indy">Independent Repair Shop</option>
-                                                <option value="mechanic">Mechanic</option>
-                                                <option value="investor">Investor</option>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <select class="mdl-textfield__input" id="interest" name="interest">
+                                              <option></option>
+                                              <option value="pilot">Pilot Program</option>
+                                              <option value="dealer">Dealership</option>
+                                              <option value="indy">Independent Repair Shop</option>
+                                              <option value="mechanic">Mechanic</option>
+                                              <option value="investor">Investor</option>
                                             </select>
-                                        </div>
+                                            <label class="mdl-textfield__label" for="interest">Interest</label>
+                                          </div>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <label class="mdl-textfield__label" for="mdl-source">How did you hear about us?</label>
                                             <input type="text" class="mdl-textfield__input" id="mdl-source" name="source">
                                         </div>
-                                        <div class="mdl-textarea">
-                                            <label class="mdl-textarea__label" for="mdl-message">Message</label>
-                                            <textarea class="mdl-textarea__input" id="mdl-message" rows="4" cols="40" name="message"></textarea>
+
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <textarea class="mdl-textfield__input" type="text" rows= "4" id="mdl-message" name="message"></textarea>
+                                            <label class="mdl-textfield__label" for="mdl-message">Message</label>
                                         </div> 
 
-                                        <div class="mdl-card__actions mdl-card--border">
+                                        <div class="mdl-card__actions">
                                             <button class="mdl-button mdl-button--colored mdl-js-button">
                                                 Submit
                                             </button>
                                         </div>
+                                        <span style="display: none; margin: 15px;" class="mdl-chip">
+                                            <span id="js-form-response" class="mdl-chip__text"></span>
+                                        </span>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-custom-close">
+                                              <span class="material-icons">close</span>
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
-                                <span style="display: none; margin: 15px;" class="mdl-chip">
-                                    <span id="js-form-response" class="mdl-chip__text"></span>
-                                </span>
-                                <div class="mdl-card__menu">
-                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-custom-close">
-                                      <span class="material-icons">close</span>
-                                    </button>
-                                </div>
                             </div>
-
                         </div>
-                        <!-- end modal form -->
+                    </div>
 
                         <div class="contact-socials">
                             <a href="https://www.linkedin.com/company/cytk/" target="_blank">
@@ -566,10 +567,9 @@
                                 <img src="images/Contact-Twitter.svg" alt="Twitter" />
                             </a>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
 
             <div class="baseplate">
                 <div class="container">
