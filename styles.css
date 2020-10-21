@@ -605,7 +605,9 @@ navigation ul li a {
 
 .toggle-button {
     display: inline-block;
-    width: 9.5rem;
+    /* width: 9.5rem; */
+    padding-left: 1rem;
+    padding-right: 1rem;
     line-height: 3rem;
     border-radius: 4.75rem;
     font-size: 1.125rem;
