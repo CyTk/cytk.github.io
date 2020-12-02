@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+          content="CYTK provides mobile assistant technology to help technicians and mechanics in the automotive space do their work safer, faster, and with greater accuracy.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-114653709-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+
+    <title>CYTK | Mobile Virtual Assistant for Mechanics</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+    <link rel="stylesheet" href="styles.css?1.7">
+    <style>
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-content {
+    margin: 15% auto;
+    /* margin-top: 25%; */
+    border-radius:5px
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    margin-top: 25%;
+}
+
+.contact-email {
+    cursor: pointer;
+}
+
+.mdl-chip {
+    text-align: center;
+}
+
+.mdl-card__actions { background-color: rgba(222, 222, 222, 0.25); }   
+.mdl-textfield, .mdl-textfield__input { 
+    padding: 10px 0;
+}               
+</style>
+
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <a class="anchor" id="top"></a>
+
+    <header class="header mdl-layout__header mdl-layout__header--scroll ">
+        <!-- Navigation -->
+        <div class="container">
+            <div class="navbar mdl-layout__header-row">
+                <a href="#top">
+                    <img src="images/logo.svg" width="110" height="42"/>
+                </a>
+                <div class="mdl-layout-spacer"></div>
+                <div class="navigation">
+                    <ul>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#value">Value</a></li>
+                        <li><a href="#market">Market</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <a href class="mobile-nav-toggle">
+                    <img src="images/Icon-Menu-Hamburger.svg" alt="Menu">
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Hello, I’m CYTK.<br/>How can I help?</h1>
+                    <h3>
+                        The next leap forward in AI-powered mobile applications,
+                        CYTK provides virtual assistant technology to help techs do their
+                        work faster, with greater accuracy and with improved human capability.
+                    </h3>
+                </div>
+                <div class="hero-media">
+                    <img class="hero-mockup" src="images/CYTK-natural-language-processing-mobile-assistant-for-automotive.gif" alt="CYTK | Mobile Assistant for Automotive Technicians" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sticky navigation -->
+    <div class="fixed sticky-nav">
+        <div class="container">
+            <div class="navbar mdl-layout__header-row">
+                <a href="#top">
+                    <img src="images/logo-alt.svg" width="110" height="42"/>
+                </a>
+                <div class="mdl-layout-spacer"></div>
+                <nav id="nav" class="navigation">
+                    <ul>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#value">Value</a></li>
+                        <li><a href="#market">Market</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href class="mobile-nav-toggle">
+                    <img src="images/Icon-Menu-Hamburger-Black.svg" alt="Menu">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="mobile-nav">
+        <a href class="mobile-nav-close">
+            <img src="images/Icon-Menu-Close.svg" alt="Close" />
+        </a>
+
+        <ul class="mobile-menu">
+            <li><a href="#product">Product</a></li>
+            <li><a href="#value">Value</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <section class="be-the-change">
+            <div class="container">
+                <div class="mdl-grid mdl-grid--no-spacing">
+                        <div class="content-header hero-spacer">
+                            <p class="content-lead">A virtual assistant that provides hands-free access to OEM repair information right at the vehicle</p>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-friend" id="product">
+            <div class="container">
+                <div class="content-header">
+                    <h2 class="content-title">CYTK Smart Search</h2>
+                    <p class="content-lead smart-search">It's as easy as ask a question, get an answer</p>
+                </div>
+                <!-- upper section -->
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/icon-procedures.png" class="img-icon"/></div>
+                            <h3 class="feature-title">Detailed Procedures</h3>
+                            <p class="feature-description">
+                                View step-by-step repair procedures including illustrations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/icon-parts-and-labor.png" class="img-icon"/></div>
+                            <h3 class="feature-title">Parts & Labor Estimates</h3>
+                            <p class="feature-description">
+                                Get parts and labor estimates, including OEM part # and MSRP with a simple voice command. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/icon-specifications.png" class="img-icon" /></div>
+                            <h3 class="feature-title">Component Specifications</h3>
+                            <p class="feature-description">
+                                Ask for and receive OEM component specifications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/icon-component-locations.png" class="img-icon" /></div>
+                            <h3 class="feature-title">Component Illustrations</h3>
+                            <p class="feature-description">
+                                View detailed component location and illustrations published by OEMs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- lower section -->
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/icon-scheduled-maintenance.png" class="img-icon" /></div>
+                            <h3 class="feature-title">Scheduled Maintenance</h3>
+                            <p class="feature-description">
+                                Access OEM Scheduled Maintenance by mileage, age, or indicator.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/icon-vehicle-recalls.png" class="img-icon" /></div>
+                            <h3 class="feature-title">Recall Information</h3>
+                            <p class="feature-description">
+                                Get recall information for a specific Year, Make, and Model provided by NHTSA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop">
+                        <div class="icon-feature">
+                            <div class="feature-icon"><img src="images/icon-history.png" class="img-icon" /></div>
+                            <h3 class="feature-title">Interaction History</h3>
+                            <p class="feature-description">
+                                View a complete history of interactions in an at-a-glance format and one-click command resend.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="value" class="value-to-oems">
+            <div class="container">
+                <div class="content-header">
+                    <h2 class="content-title">Value proposition</h2>
+                    <h3 class="content-subtitle">
+                        Real time access to OEM repair content right at the vehicle.
+                    </h3>
+                </div>
+
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col-desktop feature-list">
+                        <h3 class="feature-title">Cause</h3>
+                        <ul class="feature-items">
+                            <li class="feature-item">
+                                <h4>Save time</h4>
+                                <p>Easy, immediate access to vehicle specific OEM repair content right at the vehicle.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Expand human capability</h4>
+                                <p>Access to key vehicle information and procedures at the vehicle will improve the capability of technicians.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Improve repair knowledge & consistency</h4>
+                                <p>Providing easy access to detailed repair procedures, parts and labor estimates, illustrations and vehicle specifications will drive consistent use and improve repair quality.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col-desktop feature-list">
+                        <h3 class="feature-title">Effect</h3>
+                        <ul class="feature-items">
+                            <li class="feature-item">
+                                <h4>Drive operational efficiency</h4>
+                                <p>Improve individual and overall shop productivity and efficiency.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Knowledge</h4>
+                                <p>Expanded human capability will enable continuous learning and knowledge.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Higher repair quality</h4>
+                                <p>Consistent utilization of key repair information.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col-desktop feature-list">
+                        <h3 class="feature-title">Benefit</h3>
+                        <ul class="feature-items">
+                            <li class="feature-item">
+                                <h4>Return on investment</h4>
+                                <p>Technicians will become more efficient producing more repair hours and improving your bottom line.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Employee satisfaction</h4>
+                                <p>Making human interaction with technology seamless will expand capability and improve satisfaction within the work environment.</p>
+                            </li>
+                            <li class="feature-item">
+                                <h4>Customer satisfaction & loyalty</h4>
+                                <p>Consistent quality repairs, improving customer satisfaction and owner loyalty.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="a-vast-market" id="market">
+            <div class="container">
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop content-tiled-images">
+                        <img class="content-image" src="images/a-vast-market-3.jpg" />
+                        <img class="content-image" src="images/a-vast-market-1.jpg" />
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop mdl-cell--middle">
+                        <h2 class="content-title">A vast market</h2>
+                        <p class="content-lead">
+                            The US auto aftermarket is valued at $318.2B, equaling more than 2.3% of the US GDP.
+                            In 2018, US dealerships wrote more than 310 million repair orders, with service and parts sales totaling more than $116B. A handful of companies control both marketplaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="voice-of-customer">
+            <div class="container">
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--8-col-tablet mdl-cell--5-col-desktop mdl-cell--middle">
+                        <h2 class="content-title">Voice of<br />the customer</h2>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col-mobile mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                        <div class="feature-tile">
+                            <img class="feature-image" src="images/VoiceofCustomer-1.jpg" />
+                            <div class="feature-description">
+                                <p>67% of technicians take over 3 minutes to find required information on each repair. 35% take over 5 minutes per repair.</p>
+                            </div>
+                        </div>
+                        <div class="feature-tile">
+                            <img class="feature-image" src="images/VoiceofCustomer-3.jpg" />
+                            <div class="feature-description">
+                                <p>87% of technicians are using their cell phones to look up vehicle repair information.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col-mobile mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                        <div class="feature-tile">
+                            <img class="feature-image" src="images/VoiceofCustomer-2.jpg" />
+                            <div class="feature-description">
+                                <p>61% state that voice is imperative when their hands and vision are occupied.</p>
+                            </div>
+                        </div>
+                        <div class="feature-tile">
+                            <img class="feature-image" src="images/VoiceofCustomer-4.jpg" />
+                            <div class="feature-description">
+                                <p>40% of technicians are searching for and viewing YouTube videos on vehicle repair.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="who-s-involved" id="team">
+            <div class="container">
+                <div class="content-header">
+                    <h2 class="content-title">Who’s involved?</h2>
+                    <div class="team-switch">
+                        <button id="btn-platform" class="toggle-button selected">Platform</button>
+                        <button id="btn-sw-advisors" class="toggle-button">Software Advisors</button>
+                        <button id="btn-auto-advisors" class="toggle-button">Automotive Advisors</button>
+                    </div>
+                </div>
+
+                <div id="platform" class="team-grid">
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-BryanLevenson.jpg"/>
+                        <h4 class="person-name">Bryan Levenson<a href="https://www.linkedin.com/in/bryanlevenson/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Founder | CEO</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-JorgeOlmos.jpg"/>
+                        <h4 class="person-name">Jorge Olmos<a href="https://www.linkedin.com/in/jorgeolmos/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Co-Founder | VP of Software Development</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-MartinGregory.jpg"/>
+                        <h4 class="person-name">Martin Gregory<a href="https://www.linkedin.com/in/martingregory/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Co-Founder | Director of Software Development</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-DavidZiegler.jpg"/>
+                        <h4 class="person-name">David Ziegler<a href="https://www.linkedin.com/in/dave-ziegler-automotive-consultant-a37798149/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">VP of Operations</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-KateSchneider.png"/>
+                        <h4 class="person-name">Kate Schneider<a href="https://www.linkedin.com/in/kateschneider707/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">CTO</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-GavinHenderson.png"/>
+                        <h4 class="person-name">Dr. Gavin Henderson<a href="https://www.linkedin.com/in/drhenderson1/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Director of Data Science</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-ReavisSutphin-gray.png"/>
+                        <h4 class="person-name">Reavis Sutphin-Gray<a href="https://bit.ly/3761S4l" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Software Engineer</p>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-DavidCurrie.png"/>
+                        <h4 class="person-name">David Currie<a href="https://www.linkedin.com/in/davidrcurrie/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Head of Finance</p>
+                    </div>
+                </div>
+
+                <div id="sw-advisors" class="team-grid">
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-PatrickWienkam.jpg"/>
+                        <h4 class="person-name">Patrick Weinkam<a href="https://www.linkedin.com/in/patrick-weinkam-6b579513/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                        <p class="person-role">Co-Founder</p>
+                    </div>
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-DarrAley.jpg"/>
+                        <h4 class="person-name">Darr Aley<a href="https://www.linkedin.com/in/darr-aley-631769/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-KirkBradley.png"/>
+                        <h4 class="person-name">Kirk Bradley<a href="https://www.linkedin.com/in/bradleykirk/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-DougAley.jpg"/>
+                        <h4 class="person-name">Doug Aley<a href="https://www.linkedin.com/in/dougaley/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-TedWest.png"/>
+                        <h4 class="person-name">Ted West<a href="https://www.linkedin.com/in/westted/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                    </div>
+                </div>
+
+                <div id="auto-advisors" class="team-grid">
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-LesSilver.png"/>
+                        <h4 class="person-name">Les Silver<a href="https://www.linkedin.com/in/les-silver-368a393/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-ThomasCalloway.png"/>
+                        <h4 class="person-name">Thomas Calloway<a href="https://www.linkedin.com/in/thomas-c-calloway/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/Headshot-MikeRoberts.jpg"/>
+                        <h4 class="person-name">Mike Roberts<a href="https://www.linkedin.com/in/mike-roberts-756a227/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                    </div>
+
+                    <div class="person">
+                        <img class="person-photo" src="images/AndyFulton.png"/>
+                        <h4 class="person-name">Andy Fulton<a href="https://www.linkedin.com/in/andy-fulton-ba4447194/" target="_blank"><img src="images/LinkedIn.svg"/></a></h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer" id="contact">
+            <div class="contact">
+                <div class="container">
+
+                    <div class="contact-content">
+                        <h2 class="contact-title">Let’s chat</h2>
+                        
+                        <a id="mdl-custom-btn" class="contact-email">
+                            Contact CYTK
+                            <img src="images/Contact-Chevron.svg" />
+                        </a>
+
+                        <!--modal form -->
+                        <div id="mdl-custom-modal" class="modal">
+                            <div class="modal-content mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <form id="contact-form" action="https://contact.cytk.io/message" method="post">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-name" name="name">
+                                            <label class="mdl-textfield__label" for="mdl-name">Name</label>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-email" name="email" aria-controls="email-helper-text"
+         aria-describedby="email-helper-text" required>
+                                            <label class="mdl-textfield__label" for="mdl-email">E-mail</label>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="mdl-phone" name="phone">
+                                            <label class="mdl-textfield__label" for="mdl-phone">Phone</label>
+                                            <span class="mdl-textfield__error">Input is not a number!</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <select class="mdl-textfield__input" id="interest" name="interest">
+                                              <option></option>
+                                              <option value="pilot">Pilot Program</option>
+                                              <option value="dealer">Dealership</option>
+                                              <option value="indy">Independent Repair Shop</option>
+                                              <option value="mechanic">Mechanic</option>
+                                              <option value="investor">Investor</option>
+                                            </select>
+                                            <label class="mdl-textfield__label" for="interest">Interest</label>
+                                          </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <label class="mdl-textfield__label" for="mdl-source">How did you hear about us?</label>
+                                            <input type="text" class="mdl-textfield__input" id="mdl-source" name="source">
+                                        </div>
+
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <textarea class="mdl-textfield__input" type="text" rows= "4" id="mdl-message" name="message"></textarea>
+                                            <label class="mdl-textfield__label" for="mdl-message">Message</label>
+                                        </div> 
+
+                                        <div class="mdl-card__actions">
+                                            <button class="mdl-button mdl-button--colored mdl-js-button">
+                                                Submit
+                                            </button>
+                                        </div>
+                                        <span style="display: none; margin: 15px;" class="mdl-chip">
+                                            <span id="js-form-response" class="mdl-chip__text"></span>
+                                        </span>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-custom-close">
+                                              <span class="material-icons">close</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="contact-socials">
+                            <a href="https://www.linkedin.com/company/cytk/" target="_blank">
+                                <img src="images/Contact-LinkedIn.svg" alt="LinkedIn" />
+                            </a>
+                            <a href="https://twitter.com/CYTK_Assistant" target="_blank">
+                                <img src="images/Contact-Twitter.svg" alt="Twitter" />
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            <div class="baseplate">
+                <div class="container">
+                    <a style="color: #fff;" href="privacy-policy.html">Privacy Policy</a>
+                    <p class="copyright">© CYTK 2020. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://rawgit.com/r3plica/Scrollspy/master/scrollspy.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+
+    // set divs to hide on load
+    $("div#sw-advisors").hide();
+    $("div#auto-advisors").hide();
+
+    var isHeaderSticky = false;
+    var isMenuOpen = false;
+
+    $("#nav").scrollspy({ offset: -120 });
+
+    $("button#btn-platform").on('click', function () {
+      $(this).addClass("selected");
+      $("button#btn-sw-advisors").removeClass("selected");
+      $("div#sw-advisors").hide();
+      $("button#btn-auto-advisors").removeClass("selected");
+      $("div#auto-advisors").hide();
+      $("div#platform").css("display", "flex");
+    });
+
+    $("button#btn-sw-advisors").on('click', function () {
+      $(this).addClass("selected");
+      $("button#btn-platform").removeClass("selected");
+      $("div#platform").hide();
+      $("button#btn-auto-advisors").removeClass("selected");
+      $("div#auto-advisors").hide();
+      $("div#sw-advisors").css("display", "flex");
+    });
+
+    $("button#btn-auto-advisors").on('click', function () {
+      $(this).addClass("selected");
+      $("button#btn-sw-advisors").removeClass("selected");
+      $("div#sw-advisors").hide();
+      $("button#btn-platform").removeClass("selected");
+      $("div#platform").hide();
+      $("div#auto-advisors").css("display", "flex");
+    });
+
+    function checkSticky () {
+        var top = window.pageYOffset || document.documentElement.scrollTop
+
+        if (!isHeaderSticky && top >= 100) {
+            isHeaderSticky = true
+            $('.sticky-nav').addClass('active')
+        }
+
+        if (isHeaderSticky && top < 100) {
+            isHeaderSticky = false
+            $('.sticky-nav').removeClass('active')
+        }
+    }
+
+    function openMenu (e) {
+        e && e.preventDefault();
+        if (!isMenuOpen) {
+            $('.mobile-nav').addClass('active');
+            isMenuOpen = true;
+        }
+    }
+
+    function closeMenu (e) {
+        e && e.preventDefault();
+        if (isMenuOpen) {
+            $('.mobile-nav').removeClass('active');
+            isMenuOpen = false;
+        }
+    }
+
+    function onMenuItemClick (e) {
+        closeMenu()
+    }
+
+    $('.mobile-nav-toggle').on('click', openMenu)
+    $('.mobile-nav-close').on('click', closeMenu)
+    $('.mobile-menu a').on('click', onMenuItemClick)
+
+    setInterval(checkSticky, 200)
+    checkSticky()
+  });
+</script>
+<!-- modal window assets -->
+<script type="text/javascript">
+        (() => {
+          const form = document.querySelector('form');
+          const formResponse = document.querySelector('#js-form-response');
+          form.onsubmit = e => {
+            e.preventDefault();
+            // Prepare data to send
+            const data = {};
+            const formElements = Array.from(form);
+            formElements.map(input => (data[input.name] = input.value));
+            // Log what our lambda function will receive
+            console.log(JSON.stringify(data));
+            // Construct an HTTP request
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+            // Send the collected data as JSON
+            xhr.send(JSON.stringify(data));
+            // Callback function
+            xhr.onloadend = response => {
+              if (response.target.status === 200) {
+                // The form submission was successful
+                form.reset();
+                formResponse.innerHTML = 'We will be in touch shortly, thank you!';
+                formResponse.parentElement.style.backgroundColor = "lime";
+              } else {
+                // The form submission failed
+                formResponse.innerHTML = 'Something went wrong, please try again.';
+                formResponse.parentElement.style.backgroundColor = "red";
+              }
+              formResponse.parentElement.style.display = "block";
+            };
+          };
+        })();
+</script>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script type="text/javascript">
+var modal = document.getElementById('mdl-custom-modal'),
+    btn = document.getElementById('mdl-custom-btn'),
+    close = document.getElementsByClassName('mdl-custom-close')[0];
+
+btn.onclick = function() {
+    'use strict';
+    //btn.disabled = true;
+    modal.style.display = "block";
+    const formResponse = document.querySelector('#js-form-response').
+    formResponse.innerHTML = '';
+    formResponse.parentElement.style.display = "none";
+    document.querySelector('form').reset();
+}
+
+close.onclick = function() {
+    'use strict';   
+    modal.style.display = "none";
+}
+
+/* Use if you whant to close modal when click outside of modal window */
+window.onclick = function(event) {
+    'use strict';
+    
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+<!-- end modal window assets -->
+<!-- Salesforce Web Tracking code -->
+<script type="text/javascript">
+piAId = '899961';
+piCId = '2531';
+piHostname = 'pi.pardot.com';
+
+(function() {
+function async_load(){
+var s = document.createElement('script'); s.type = 'text/javascript';
+s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+}
+if(window.attachEvent) { window.attachEvent('onload', async_load); }
+else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+<!-- end SFDC web tracking code -->
+</body>
+</html>
